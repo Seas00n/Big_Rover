@@ -12,7 +12,7 @@ camRgb.setColorOrder(dai.ColorCameraProperties.ColorOrder.RGB)
 
 camRgb.preview.link(xoutRgb.input)
 
-img_calibrate_path = 'img/calibrate'
+img_calibrate_path = 'img/calibrate/'
 num_of_cal = 20
 num_img = 0
 with dai.Device(pipeline) as device:
@@ -26,7 +26,7 @@ with dai.Device(pipeline) as device:
         key = cv2.waitKey(1)
         if key == ord('t'):
             if num_img < num_of_cal:
-                cv2.imwrite("cal_{}.png".format(num_img), img)
+                cv2.imwrite(img_calibrate_path+"cal_{}.png".format(num_img), img)
                 print("Calibrate {}".format(num_img))
                 num_img += 1
         elif key == ord('q'):
