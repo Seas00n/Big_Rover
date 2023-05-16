@@ -9,6 +9,7 @@ april_tag_pose/CMakeFiles/open_cam.dir/src/open_cam.cpp.o
  /opt/ros/noetic/include/depthai-bootloader-shared/NlohmannJsonCompat.hpp
  /opt/ros/noetic/include/depthai-bootloader-shared/Section.hpp
  /opt/ros/noetic/include/depthai-bootloader-shared/Type.hpp
+ /opt/ros/noetic/include/depthai-shared/3rdparty/tl/optional.hpp
  /opt/ros/noetic/include/depthai-shared/common/CameraBoardSocket.hpp
  /opt/ros/noetic/include/depthai-shared/common/CameraFeatures.hpp
  /opt/ros/noetic/include/depthai-shared/common/CameraImageOrientation.hpp
@@ -232,6 +233,50 @@ april_tag_pose/CMakeFiles/open_cam.dir/src/open_cam.cpp.o
  /opt/ros/noetic/include/std_msgs/Header.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/XLink/XLinkPublicDefines.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nlohmann/json.hpp
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/array.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/encoding.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/encoding_byte.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/enum.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/handle.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/logical_buffer.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/macros.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/map.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/members.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/optional.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/pair.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/reference_wrapper.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/result.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/serializer.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/string.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/table.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/tuple.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/utility.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/value.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/variant.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/base/vector.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/serializer.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/status.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/structure.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/table.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/traits/is_comparable.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/traits/is_detected.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/traits/is_template_base_of.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/traits/void.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/types/detail/logical_buffer.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/types/detail/member_pointer.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/types/detail/variant.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/types/handle.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/types/optional.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/types/result.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/types/variant.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/utility/bounded_reader.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/utility/bounded_writer.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/utility/buffer_reader.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/utility/compiler.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/utility/sip_hash.h
+ /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/nop/utility/stream_writer.h
  /usr/include/opencv4/opencv2/calib3d.hpp
  /usr/include/opencv4/opencv2/core.hpp
  /usr/include/opencv4/opencv2/core/affine.hpp

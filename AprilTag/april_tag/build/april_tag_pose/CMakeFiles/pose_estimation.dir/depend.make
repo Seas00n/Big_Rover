@@ -105,6 +105,9 @@ april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ro
 april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/visp3/core/vpTime.h
 april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/visp3/core/vpTranslationVector.h
 april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/visp3/core/vpVelocityTwistMatrix.h
+april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/visp3/core/vpXmlParserCamera.h
+april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/visp3/detection/vpDetectorAprilTag.h
+april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/visp3/detection/vpDetectorBase.h
 april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/visp3/gui/vpDisplayD3D.h
 april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/visp3/gui/vpDisplayGDI.h
 april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/visp3/gui/vpDisplayGTK.h

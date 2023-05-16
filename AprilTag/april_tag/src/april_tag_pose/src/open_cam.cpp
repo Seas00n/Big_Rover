@@ -1,14 +1,16 @@
 #include <ros/ros.h>
 #include <depthai/depthai.hpp>
 #include <cv_bridge/cv_bridge.h>
+#include <sensor_msgs/CameraInfo.h>
 #include <image_transport/image_transport.h>
+
 
 int main(int argc, char **argv){
     dai::Pipeline pipeline;
     auto camRgb = pipeline.create<dai::node::ColorCamera>();
     auto xoutRgb = pipeline.create<dai::node::XLinkOut>();
     xoutRgb->setStreamName("rgb");
-    camRgb->setPreviewSize(300, 300);
+    camRgb->setPreviewSize(500, 500);
     camRgb->setBoardSocket(dai::CameraBoardSocket::RGB);
     camRgb->setResolution(dai::ColorCameraProperties::SensorResolution::THE_1080_P);
     camRgb->setInterleaved(false);
@@ -17,9 +19,9 @@ int main(int argc, char **argv){
     dai::Device device(pipeline, dai::UsbSpeed::SUPER);
     auto qRgb = device.getOutputQueue("rgb", 4, false);
     ros::init(argc,argv,"cam_node");
-    ros::NodeHandle nh("~");
+    ros::NodeHandle nh;
     image_transport::ImageTransport it(nh);
-    image_transport::Publisher pub = it.advertise("image_raw", 10);
+    image_transport::Publisher pub = it.advertise("/camera/image_raw", 10);//发布消息需要使用image_transport
     int video_device = 1;
     int frame_rate = 25;
     nh.param<int>("video_device", video_device, 0);
@@ -28,16 +30,16 @@ int main(int argc, char **argv){
     while(nh.ok()){
         cv::Mat image;
         auto inRgb = qRgb->get<dai::ImgFrame>();
-        cv::imshow("rgb",inRgb->getCvFrame());
-        cv_bridge::CvImage out_msg;
-        out_msg.header.stamp = ros::Time::now();
-        out_msg.encoding = sensor_msgs::image_encodings::BGR8;
-        out_msg.image = image;
-        pub.publish(out_msg.toImageMsg());
+        image = inRgb->getCvFrame();
+        cv::imshow("rgb",image);
+        sensor_msgs::ImagePtr out_msg = cv_bridge::CvImage(std_msgs::Header(), "bgr8", image).toImageMsg();//需要把opencv图片转换为sensor_msgs
+        pub.publish(out_msg);
         int key = cv::waitKey(1);
         if(key == 'q'){
             break;
         }
         loop_rate.sleep();
     }
+    device.close();
+    return 0;
 }

@@ -106,6 +106,9 @@ april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o
  /opt/ros/noetic/include/visp3/core/vpTime.h
  /opt/ros/noetic/include/visp3/core/vpTranslationVector.h
  /opt/ros/noetic/include/visp3/core/vpVelocityTwistMatrix.h
+ /opt/ros/noetic/include/visp3/core/vpXmlParserCamera.h
+ /opt/ros/noetic/include/visp3/detection/vpDetectorAprilTag.h
+ /opt/ros/noetic/include/visp3/detection/vpDetectorBase.h
  /opt/ros/noetic/include/visp3/gui/vpDisplayD3D.h
  /opt/ros/noetic/include/visp3/gui/vpDisplayGDI.h
  /opt/ros/noetic/include/visp3/gui/vpDisplayGTK.h
