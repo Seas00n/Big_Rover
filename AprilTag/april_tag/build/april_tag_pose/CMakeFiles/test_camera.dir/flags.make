@@ -6,5 +6,5 @@ CXX_FLAGS =  -fopenmp -fPIC   -std=c++17
 
 CXX_DEFINES = -DDEPTHAI_TARGET_CORE -DDEPTHAI_TARGET_OPENCV -DJSON_USE_IMPLICIT_CONVERSIONS=1 -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"april_tag_pose\"
 
-CXX_INCLUDES = -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/yuxuan/visp-ros/install/include -I/usr/include/ois -isystem /opt/ros/noetic/include -isystem /usr/include/opencv4 -isystem /usr/include/eigen3 -isystem /usr/include/libxml2 -isystem /usr/include/libusb-1.0 -isystem /usr/include/pcl-1.10 -isystem /usr/include/vtk-7.1 -isystem /usr/include/freetype2 -isystem /usr/include/ni -isystem /usr/include/openni2 -isystem /usr/include/OGRE -isystem /opt/ros/noetic/include/depthai-shared/3rdparty -isystem /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include 
+CXX_INCLUDES = -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/yuxuan/visp-ros/install/include -isystem /opt/ros/noetic/include -isystem /usr/include/opencv4 -isystem /usr/include/eigen3 -isystem /usr/include/libxml2 -isystem /usr/include/OGRE -isystem /usr/include/ois -isystem /opt/ros/noetic/include/depthai-shared/3rdparty -isystem /opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include 
 

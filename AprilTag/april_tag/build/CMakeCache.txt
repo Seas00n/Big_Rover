@@ -392,10 +392,10 @@ UBUNTU:BOOL=TRUE
 UBUNTU_FOCAL:BOOL=TRUE
 
 //ViSPConfig.cmake path location
-VISP_CONFIG_PATH:PATH=/usr/local/lib/cmake/visp
+VISP_CONFIG_PATH:PATH=/opt/ros/noetic/lib/x86_64-linux-gnu/cmake/visp
 
 //The directory containing a CMake configuration file for VISP.
-VISP_DIR:PATH=/usr/local/lib/cmake/visp
+VISP_DIR:PATH=/opt/ros/noetic/lib/x86_64-linux-gnu/cmake/visp
 
 //The directory containing a CMake configuration file for VISP_ROS.
 VISP_ROS_DIR:PATH=VISP_ROS_DIR-NOTFOUND
