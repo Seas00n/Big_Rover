@@ -168,19 +168,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-.PHONY : april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+april_tag_pose/CMakeFiles/open_cam.dir/rule:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/open_cam.dir/rule
+.PHONY : april_tag_pose/CMakeFiles/open_cam.dir/rule
 
 # Convenience name for target.
-geometry_msgs_generate_messages_eus: april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+open_cam: april_tag_pose/CMakeFiles/open_cam.dir/rule
 
-.PHONY : geometry_msgs_generate_messages_eus
+.PHONY : open_cam
 
 # fast build rule for target.
-geometry_msgs_generate_messages_eus/fast:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-.PHONY : geometry_msgs_generate_messages_eus/fast
+open_cam/fast:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/open_cam.dir/build.make april_tag_pose/CMakeFiles/open_cam.dir/build
+.PHONY : open_cam/fast
 
 # Convenience name for target.
 april_tag_pose/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
@@ -228,6 +228,21 @@ roscpp_generate_messages_nodejs/fast:
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 # Convenience name for target.
+april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+.PHONY : april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_eus: april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_eus
+
+# fast build rule for target.
+geometry_msgs_generate_messages_eus/fast:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+.PHONY : geometry_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
 april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
 	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 .PHONY : april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
@@ -256,6 +271,21 @@ std_msgs_generate_messages_py: april_tag_pose/CMakeFiles/std_msgs_generate_messa
 std_msgs_generate_messages_py/fast:
 	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/std_msgs_generate_messages_py.dir/build.make april_tag_pose/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+.PHONY : april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_py: april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
@@ -316,6 +346,21 @@ bond_generate_messages_cpp: april_tag_pose/CMakeFiles/bond_generate_messages_cpp
 bond_generate_messages_cpp/fast:
 	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/bond_generate_messages_cpp.dir/build.make april_tag_pose/CMakeFiles/bond_generate_messages_cpp.dir/build
 .PHONY : bond_generate_messages_cpp/fast
+
+# Convenience name for target.
+april_tag_pose/CMakeFiles/pose_estimation.dir/rule:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/pose_estimation.dir/rule
+.PHONY : april_tag_pose/CMakeFiles/pose_estimation.dir/rule
+
+# Convenience name for target.
+pose_estimation: april_tag_pose/CMakeFiles/pose_estimation.dir/rule
+
+.PHONY : pose_estimation
+
+# fast build rule for target.
+pose_estimation/fast:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/pose_estimation.dir/build.make april_tag_pose/CMakeFiles/pose_estimation.dir/build
+.PHONY : pose_estimation/fast
 
 # Convenience name for target.
 april_tag_pose/CMakeFiles/bond_generate_messages_eus.dir/rule:
@@ -408,6 +453,36 @@ roscpp_generate_messages_eus/fast:
 .PHONY : roscpp_generate_messages_eus/fast
 
 # Convenience name for target.
+april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+.PHONY : april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_py: april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_py
+
+# fast build rule for target.
+sensor_msgs_generate_messages_py/fast:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+.PHONY : april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_eus: april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_eus
+
+# fast build rule for target.
+tf2_msgs_generate_messages_eus/fast:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+.PHONY : tf2_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
 april_tag_pose/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 .PHONY : april_tag_pose/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
@@ -453,36 +528,6 @@ actionlib_msgs_generate_messages_py/fast:
 .PHONY : actionlib_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-april_tag_pose/CMakeFiles/visp_ros_generate_messages_py.dir/rule:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/visp_ros_generate_messages_py.dir/rule
-.PHONY : april_tag_pose/CMakeFiles/visp_ros_generate_messages_py.dir/rule
-
-# Convenience name for target.
-visp_ros_generate_messages_py: april_tag_pose/CMakeFiles/visp_ros_generate_messages_py.dir/rule
-
-.PHONY : visp_ros_generate_messages_py
-
-# fast build rule for target.
-visp_ros_generate_messages_py/fast:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/visp_ros_generate_messages_py.dir/build.make april_tag_pose/CMakeFiles/visp_ros_generate_messages_py.dir/build
-.PHONY : visp_ros_generate_messages_py/fast
-
-# Convenience name for target.
-april_tag_pose/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : april_tag_pose/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: april_tag_pose/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make april_tag_pose/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
 april_tag_pose/CMakeFiles/roscpp_generate_messages_py.dir/rule:
 	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : april_tag_pose/CMakeFiles/roscpp_generate_messages_py.dir/rule
@@ -496,6 +541,21 @@ roscpp_generate_messages_py: april_tag_pose/CMakeFiles/roscpp_generate_messages_
 roscpp_generate_messages_py/fast:
 	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/roscpp_generate_messages_py.dir/build.make april_tag_pose/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
+
+# Convenience name for target.
+april_tag_pose/CMakeFiles/visp_ros_generate_messages_cpp.dir/rule:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/visp_ros_generate_messages_cpp.dir/rule
+.PHONY : april_tag_pose/CMakeFiles/visp_ros_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+visp_ros_generate_messages_cpp: april_tag_pose/CMakeFiles/visp_ros_generate_messages_cpp.dir/rule
+
+.PHONY : visp_ros_generate_messages_cpp
+
+# fast build rule for target.
+visp_ros_generate_messages_cpp/fast:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/visp_ros_generate_messages_cpp.dir/build.make april_tag_pose/CMakeFiles/visp_ros_generate_messages_cpp.dir/build
+.PHONY : visp_ros_generate_messages_cpp/fast
 
 # Convenience name for target.
 april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
@@ -526,21 +586,6 @@ tf_generate_messages_cpp: april_tag_pose/CMakeFiles/tf_generate_messages_cpp.dir
 tf_generate_messages_cpp/fast:
 	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/tf_generate_messages_cpp.dir/build.make april_tag_pose/CMakeFiles/tf_generate_messages_cpp.dir/build
 .PHONY : tf_generate_messages_cpp/fast
-
-# Convenience name for target.
-april_tag_pose/CMakeFiles/visp_ros_generate_messages_cpp.dir/rule:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/visp_ros_generate_messages_cpp.dir/rule
-.PHONY : april_tag_pose/CMakeFiles/visp_ros_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-visp_ros_generate_messages_cpp: april_tag_pose/CMakeFiles/visp_ros_generate_messages_cpp.dir/rule
-
-.PHONY : visp_ros_generate_messages_cpp
-
-# fast build rule for target.
-visp_ros_generate_messages_cpp/fast:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/visp_ros_generate_messages_cpp.dir/build.make april_tag_pose/CMakeFiles/visp_ros_generate_messages_cpp.dir/build
-.PHONY : visp_ros_generate_messages_cpp/fast
 
 # Convenience name for target.
 april_tag_pose/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
@@ -693,51 +738,6 @@ geometry_msgs_generate_messages_cpp/fast:
 .PHONY : geometry_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
-.PHONY : april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_eus: april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_eus
-
-# fast build rule for target.
-tf2_msgs_generate_messages_eus/fast:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
-.PHONY : tf2_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_py: april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 april_tag_pose/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
 	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 .PHONY : april_tag_pose/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
@@ -766,6 +766,36 @@ actionlib_generate_messages_lisp: april_tag_pose/CMakeFiles/actionlib_generate_m
 actionlib_generate_messages_lisp/fast:
 	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make april_tag_pose/CMakeFiles/actionlib_generate_messages_lisp.dir/build
 .PHONY : actionlib_generate_messages_lisp/fast
+
+# Convenience name for target.
+april_tag_pose/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+.PHONY : april_tag_pose/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_lisp: april_tag_pose/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make april_tag_pose/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+april_tag_pose/CMakeFiles/visp_ros_generate_messages_py.dir/rule:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/visp_ros_generate_messages_py.dir/rule
+.PHONY : april_tag_pose/CMakeFiles/visp_ros_generate_messages_py.dir/rule
+
+# Convenience name for target.
+visp_ros_generate_messages_py: april_tag_pose/CMakeFiles/visp_ros_generate_messages_py.dir/rule
+
+.PHONY : visp_ros_generate_messages_py
+
+# fast build rule for target.
+visp_ros_generate_messages_py/fast:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/visp_ros_generate_messages_py.dir/build.make april_tag_pose/CMakeFiles/visp_ros_generate_messages_py.dir/build
+.PHONY : visp_ros_generate_messages_py/fast
 
 # Convenience name for target.
 april_tag_pose/CMakeFiles/nodelet_generate_messages_cpp.dir/rule:
@@ -1097,6 +1127,60 @@ tf2_msgs_generate_messages_lisp/fast:
 	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
 .PHONY : tf2_msgs_generate_messages_lisp/fast
 
+src/open_cam.o: src/open_cam.cpp.o
+
+.PHONY : src/open_cam.o
+
+# target to build an object file
+src/open_cam.cpp.o:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/open_cam.dir/build.make april_tag_pose/CMakeFiles/open_cam.dir/src/open_cam.cpp.o
+.PHONY : src/open_cam.cpp.o
+
+src/open_cam.i: src/open_cam.cpp.i
+
+.PHONY : src/open_cam.i
+
+# target to preprocess a source file
+src/open_cam.cpp.i:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/open_cam.dir/build.make april_tag_pose/CMakeFiles/open_cam.dir/src/open_cam.cpp.i
+.PHONY : src/open_cam.cpp.i
+
+src/open_cam.s: src/open_cam.cpp.s
+
+.PHONY : src/open_cam.s
+
+# target to generate assembly for a file
+src/open_cam.cpp.s:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/open_cam.dir/build.make april_tag_pose/CMakeFiles/open_cam.dir/src/open_cam.cpp.s
+.PHONY : src/open_cam.cpp.s
+
+src/pose_estimation.o: src/pose_estimation.cpp.o
+
+.PHONY : src/pose_estimation.o
+
+# target to build an object file
+src/pose_estimation.cpp.o:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/pose_estimation.dir/build.make april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o
+.PHONY : src/pose_estimation.cpp.o
+
+src/pose_estimation.i: src/pose_estimation.cpp.i
+
+.PHONY : src/pose_estimation.i
+
+# target to preprocess a source file
+src/pose_estimation.cpp.i:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/pose_estimation.dir/build.make april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.i
+.PHONY : src/pose_estimation.cpp.i
+
+src/pose_estimation.s: src/pose_estimation.cpp.s
+
+.PHONY : src/pose_estimation.s
+
+# target to generate assembly for a file
+src/pose_estimation.cpp.s:
+	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/pose_estimation.dir/build.make april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.s
+.PHONY : src/pose_estimation.cpp.s
+
 src/test_camera.o: src/test_camera.cpp.o
 
 .PHONY : src/test_camera.o
@@ -1162,32 +1246,35 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... open_cam"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... visp_ros_generate_messages_eus"
 	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_py"
+	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... edit_cache"
 	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... test_camera"
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... bond_generate_messages_cpp"
+	@echo "... pose_estimation"
 	@echo "... bond_generate_messages_eus"
 	@echo "... bond_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_eus"
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... actionlib_msgs_generate_messages_py"
-	@echo "... visp_ros_generate_messages_py"
-	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
+	@echo "... visp_ros_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... tf_generate_messages_cpp"
-	@echo "... visp_ros_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... install/local"
@@ -1199,11 +1286,10 @@ help:
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... visp_ros_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... tf2_msgs_generate_messages_eus"
-	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... actionlib_generate_messages_lisp"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... visp_ros_generate_messages_py"
 	@echo "... nodelet_generate_messages_cpp"
 	@echo "... nodelet_generate_messages_eus"
 	@echo "... actionlib_generate_messages_nodejs"
@@ -1226,6 +1312,12 @@ help:
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... test_pose"
 	@echo "... tf2_msgs_generate_messages_lisp"
+	@echo "... src/open_cam.o"
+	@echo "... src/open_cam.i"
+	@echo "... src/open_cam.s"
+	@echo "... src/pose_estimation.o"
+	@echo "... src/pose_estimation.i"
+	@echo "... src/pose_estimation.s"
 	@echo "... src/test_camera.o"
 	@echo "... src/test_camera.i"
 	@echo "... src/test_camera.s"

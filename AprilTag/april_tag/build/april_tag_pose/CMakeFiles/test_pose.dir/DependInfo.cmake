@@ -10,9 +10,6 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
-  "DEPTHAI_TARGET_CORE"
-  "DEPTHAI_TARGET_OPENCV"
-  "JSON_USE_IMPLICIT_CONVERSIONS=1"
   "ROSCONSOLE_BACKEND_LOG4CXX"
   "ROS_BUILD_SHARED_LIBS=1"
   "ROS_PACKAGE_NAME=\"april_tag_pose\""
@@ -20,16 +17,14 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/home/yuxuan/visp-ros/install/include"
-  "/opt/ros/noetic/include"
   "/usr/include/opencv4"
   "/usr/include/eigen3"
   "/usr/include/libxml2"
   "/usr/include/OGRE"
   "/usr/include/ois"
-  "/opt/ros/noetic/include/depthai-shared/3rdparty"
-  "/opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include"
   )
 
 # Targets to which this target links.

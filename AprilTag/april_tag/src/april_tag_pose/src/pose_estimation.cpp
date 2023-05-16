@@ -1,57 +1,29 @@
-#include <iostream>
+#include <visp/vpDisplayX.h>
+#include <visp/vpImage.h>
+#include <visp_ros/vpROSGrabber.h>
 
-#include "depthai/depthai.hpp"
-
-int main() {
-    using namespace std;
-    // Create pipeline
-    dai::Pipeline pipeline;
-
-    // Define source and output
-    auto camRgb = pipeline.create<dai::node::ColorCamera>();
-    auto xoutRgb = pipeline.create<dai::node::XLinkOut>();
-
-    xoutRgb->setStreamName("rgb");
-
-    // Properties
-    camRgb->setPreviewSize(300, 300);
-    camRgb->setBoardSocket(dai::CameraBoardSocket::RGB);
-    camRgb->setResolution(dai::ColorCameraProperties::SensorResolution::THE_1080_P);
-    camRgb->setInterleaved(false);
-    camRgb->setColorOrder(dai::ColorCameraProperties::ColorOrder::RGB);
-
-    // Linking
-    camRgb->preview.link(xoutRgb->input);
-
-    // Connect to device and start pipeline
-    dai::Device device(pipeline, dai::UsbSpeed::SUPER);
-
-    cout << "Connected cameras: " << device.getConnectedCameraFeatures() << endl;
-
-    // Print USB speed
-    cout << "Usb speed: " << device.getUsbSpeed() << endl;
-
-    // Bootloader version
-    if(device.getBootloaderVersion()) {
-        cout << "Bootloader version: " << device.getBootloaderVersion()->toString() << endl;
-    }
-
-    // Device name
-    cout << "Device name: " << device.getDeviceName() << endl;
-
-    // Output queue will be used to get the rgb frames from the output defined above
-    auto qRgb = device.getOutputQueue("rgb", 4, false);
-
-    while(true) {
-        auto inRgb = qRgb->get<dai::ImgFrame>();
-
-        // Retrieve 'bgr' (opencv format) frame
-        cv::imshow("rgb", inRgb->getCvFrame());
-
-        int key = cv::waitKey(1);
-        if(key == 'q' || key == 'Q') {
-            break;
+int main(int argc, const char** argv){
+    try{
+        vpImage<vpRGBa> I;
+        vpROSGrabber g;
+        g.setImageTopic("/cam_node/image_raw");
+        g.open(I);
+    #ifdef VISP_HAVE_X11
+        vpDisplayX d(I);    
+    #else
+        std::cout<<"No image viewer is available\n";
+    #endif
+        while(1){
+            g.acquire(I);
+            vpDisplay::display(I);
+            vpDisplay::displayText(I,20,20,
+            "Click to quit...",vpColor::red);
+            vpDisplay::flush(I);
+            if(vpDisplay::getClick(I,false)){
+                break;
+            }
         }
+    }catch(vpException e){
+        std::cout << "Catch an exception:"<< e <<std::endl;
     }
-    return 0;
 }

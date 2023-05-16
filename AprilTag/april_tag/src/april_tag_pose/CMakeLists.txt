@@ -3,6 +3,10 @@ project(april_tag_pose)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
+  std_msgs
+  sensor_msgs
+  cv_bridge
+  image_transport
 )
 # please install visp and visp ros as https://github.com/lagadic/visp_ros
 find_package(depthai CONFIG REQUIRED)
@@ -20,6 +24,7 @@ catkin_package(
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}
   ${VISP_INCLUDE_DIRS}
   ${visp_ros_INCLUDE_DIRS}
 )
@@ -43,16 +48,19 @@ add_executable(pose_estimation src/pose_estimation.cpp)
 
 target_link_libraries(
   pose_estimation PUBLIC
-  depthai::opencv
   ${OpenCV_LIBS}
   ${catkin_LIBRARIES}
+  ${VISP_LIBRARIES}
+  ${visp_ros_LIBRARIES}
   )
 
 add_executable(open_cam src/open_cam.cpp)
 
 target_link_libraries(
   open_cam PUBLIC
+  depthai::opencv
   ${catkin_LIBRARIES}
-  ${VISP_LIBRARIES}
-  ${visp_ros_LIBRARIES}
+  ${OpenCV_LIBS}
   )
+
+SET(CMAKE_BUILD_TYPE "RelWithDebInfo")

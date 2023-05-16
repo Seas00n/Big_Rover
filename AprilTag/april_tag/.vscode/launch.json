@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ROS: Launch",
+            "request": "launch",
+            "target": "/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/april_tag_pose/launch/pose_estimation.launch",
+            "type": "ros"
+        }
+    ]
+}

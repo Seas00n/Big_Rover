@@ -285,17 +285,17 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_eus
+# Target rules for targets named open_cam
 
 # Build rule for target.
-geometry_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_eus
-.PHONY : geometry_msgs_generate_messages_eus
+open_cam: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 open_cam
+.PHONY : open_cam
 
 # fast build rule for target.
-geometry_msgs_generate_messages_eus/fast:
-	$(MAKE) -f april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-.PHONY : geometry_msgs_generate_messages_eus/fast
+open_cam/fast:
+	$(MAKE) -f april_tag_pose/CMakeFiles/open_cam.dir/build.make april_tag_pose/CMakeFiles/open_cam.dir/build
+.PHONY : open_cam/fast
 
 #=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_py
@@ -337,6 +337,19 @@ roscpp_generate_messages_nodejs/fast:
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_eus
+
+# Build rule for target.
+geometry_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_eus
+.PHONY : geometry_msgs_generate_messages_eus
+
+# fast build rule for target.
+geometry_msgs_generate_messages_eus/fast:
+	$(MAKE) -f april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+.PHONY : geometry_msgs_generate_messages_eus/fast
+
+#=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -361,6 +374,19 @@ std_msgs_generate_messages_py: cmake_check_build_system
 std_msgs_generate_messages_py/fast:
 	$(MAKE) -f april_tag_pose/CMakeFiles/std_msgs_generate_messages_py.dir/build.make april_tag_pose/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_py
+
+# Build rule for target.
+geometry_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	$(MAKE) -f april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_nodejs
@@ -413,6 +439,19 @@ bond_generate_messages_cpp: cmake_check_build_system
 bond_generate_messages_cpp/fast:
 	$(MAKE) -f april_tag_pose/CMakeFiles/bond_generate_messages_cpp.dir/build.make april_tag_pose/CMakeFiles/bond_generate_messages_cpp.dir/build
 .PHONY : bond_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named pose_estimation
+
+# Build rule for target.
+pose_estimation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pose_estimation
+.PHONY : pose_estimation
+
+# fast build rule for target.
+pose_estimation/fast:
+	$(MAKE) -f april_tag_pose/CMakeFiles/pose_estimation.dir/build.make april_tag_pose/CMakeFiles/pose_estimation.dir/build
+.PHONY : pose_estimation/fast
 
 #=============================================================================
 # Target rules for targets named bond_generate_messages_eus
@@ -493,6 +532,32 @@ roscpp_generate_messages_eus/fast:
 .PHONY : roscpp_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_py
+
+# Build rule for target.
+sensor_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
+.PHONY : sensor_msgs_generate_messages_py
+
+# fast build rule for target.
+sensor_msgs_generate_messages_py/fast:
+	$(MAKE) -f april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named tf2_msgs_generate_messages_eus
+
+# Build rule for target.
+tf2_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_eus
+.PHONY : tf2_msgs_generate_messages_eus
+
+# fast build rule for target.
+tf2_msgs_generate_messages_eus/fast:
+	$(MAKE) -f april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+.PHONY : tf2_msgs_generate_messages_eus/fast
+
+#=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -532,32 +597,6 @@ actionlib_msgs_generate_messages_py/fast:
 .PHONY : actionlib_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named visp_ros_generate_messages_py
-
-# Build rule for target.
-visp_ros_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 visp_ros_generate_messages_py
-.PHONY : visp_ros_generate_messages_py
-
-# fast build rule for target.
-visp_ros_generate_messages_py/fast:
-	$(MAKE) -f april_tag_pose/CMakeFiles/visp_ros_generate_messages_py.dir/build.make april_tag_pose/CMakeFiles/visp_ros_generate_messages_py.dir/build
-.PHONY : visp_ros_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_lisp
-
-# Build rule for target.
-std_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f april_tag_pose/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make april_tag_pose/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-#=============================================================================
 # Target rules for targets named roscpp_generate_messages_py
 
 # Build rule for target.
@@ -569,6 +608,19 @@ roscpp_generate_messages_py: cmake_check_build_system
 roscpp_generate_messages_py/fast:
 	$(MAKE) -f april_tag_pose/CMakeFiles/roscpp_generate_messages_py.dir/build.make april_tag_pose/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named visp_ros_generate_messages_cpp
+
+# Build rule for target.
+visp_ros_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 visp_ros_generate_messages_cpp
+.PHONY : visp_ros_generate_messages_cpp
+
+# fast build rule for target.
+visp_ros_generate_messages_cpp/fast:
+	$(MAKE) -f april_tag_pose/CMakeFiles/visp_ros_generate_messages_cpp.dir/build.make april_tag_pose/CMakeFiles/visp_ros_generate_messages_cpp.dir/build
+.PHONY : visp_ros_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_lisp
@@ -595,19 +647,6 @@ tf_generate_messages_cpp: cmake_check_build_system
 tf_generate_messages_cpp/fast:
 	$(MAKE) -f april_tag_pose/CMakeFiles/tf_generate_messages_cpp.dir/build.make april_tag_pose/CMakeFiles/tf_generate_messages_cpp.dir/build
 .PHONY : tf_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named visp_ros_generate_messages_cpp
-
-# Build rule for target.
-visp_ros_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 visp_ros_generate_messages_cpp
-.PHONY : visp_ros_generate_messages_cpp
-
-# fast build rule for target.
-visp_ros_generate_messages_cpp/fast:
-	$(MAKE) -f april_tag_pose/CMakeFiles/visp_ros_generate_messages_cpp.dir/build.make april_tag_pose/CMakeFiles/visp_ros_generate_messages_cpp.dir/build
-.PHONY : visp_ros_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_cpp
@@ -740,45 +779,6 @@ geometry_msgs_generate_messages_cpp/fast:
 .PHONY : geometry_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named tf2_msgs_generate_messages_eus
-
-# Build rule for target.
-tf2_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_eus
-.PHONY : tf2_msgs_generate_messages_eus
-
-# fast build rule for target.
-tf2_msgs_generate_messages_eus/fast:
-	$(MAKE) -f april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
-.PHONY : tf2_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_py
-
-# Build rule for target.
-sensor_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	$(MAKE) -f april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_py
-
-# Build rule for target.
-geometry_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	$(MAKE) -f april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-#=============================================================================
 # Target rules for targets named roscpp_generate_messages_lisp
 
 # Build rule for target.
@@ -803,6 +803,32 @@ actionlib_generate_messages_lisp: cmake_check_build_system
 actionlib_generate_messages_lisp/fast:
 	$(MAKE) -f april_tag_pose/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make april_tag_pose/CMakeFiles/actionlib_generate_messages_lisp.dir/build
 .PHONY : actionlib_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_lisp
+
+# Build rule for target.
+std_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f april_tag_pose/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make april_tag_pose/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named visp_ros_generate_messages_py
+
+# Build rule for target.
+visp_ros_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 visp_ros_generate_messages_py
+.PHONY : visp_ros_generate_messages_py
+
+# fast build rule for target.
+visp_ros_generate_messages_py/fast:
+	$(MAKE) -f april_tag_pose/CMakeFiles/visp_ros_generate_messages_py.dir/build.make april_tag_pose/CMakeFiles/visp_ros_generate_messages_py.dir/build
+.PHONY : visp_ros_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named nodelet_generate_messages_cpp
@@ -1112,31 +1138,34 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
-	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... open_cam"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... visp_ros_generate_messages_eus"
 	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_py"
+	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... test_camera"
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... bond_generate_messages_cpp"
+	@echo "... pose_estimation"
 	@echo "... bond_generate_messages_eus"
 	@echo "... bond_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_eus"
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... actionlib_msgs_generate_messages_py"
-	@echo "... visp_ros_generate_messages_py"
-	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
+	@echo "... visp_ros_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... tf_generate_messages_cpp"
-	@echo "... visp_ros_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... visp_ros_generate_messages_nodejs"
@@ -1147,11 +1176,10 @@ help:
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... visp_ros_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... tf2_msgs_generate_messages_eus"
-	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... actionlib_generate_messages_lisp"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... visp_ros_generate_messages_py"
 	@echo "... nodelet_generate_messages_cpp"
 	@echo "... nodelet_generate_messages_eus"
 	@echo "... actionlib_generate_messages_nodejs"

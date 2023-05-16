@@ -521,6 +521,9 @@ gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 //The directory containing a CMake configuration file for image_geometry.
 image_geometry_DIR:PATH=/opt/ros/noetic/share/image_geometry/cmake
 
+//The directory containing a CMake configuration file for image_transport.
+image_transport_DIR:PATH=/opt/ros/noetic/share/image_transport/cmake
+
 //Path to a library.
 lib:FILEPATH=/opt/ros/noetic/lib/libcamera_calibration_parsers.so
 
