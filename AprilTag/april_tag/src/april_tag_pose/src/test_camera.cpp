@@ -14,7 +14,9 @@ int main(int argc, const char **argv)
 #if defined(VISP_HAVE_APRILTAG) && (defined(VISP_HAVE_X11) || defined(VISP_HAVE_GDI) || defined(VISP_HAVE_OPENCV)) &&  \
     (defined(VISP_HAVE_V4L2) || defined(VISP_HAVE_OPENCV))
   int opt_device = 0;
+  // 选择 36h11
   vpDetectorAprilTag::vpAprilTagFamily tagFamily = vpDetectorAprilTag::TAG_36h11;
+  // 选择位姿估计方法 
   vpDetectorAprilTag::vpPoseEstimationMethod poseEstimationMethod = vpDetectorAprilTag::HOMOGRAPHY_VIRTUAL_VS;
   double tagSize = 0.053;
   float quad_decimate = 1.0;
@@ -117,6 +119,7 @@ int main(int argc, const char **argv)
       vpDisplay::displayText(I, 40, 20, ss.str(), vpColor::red);
       for (size_t i = 0; i < cMo_vec.size(); i++) {
         vpDisplay::displayFrame(I, cMo_vec[i], cam, tagSize / 2, vpColor::none, 3);
+        std::cout<<cMo_vec[i]<<std::endl;
       }
       vpDisplay::displayText(I, 20, 20, "Click to quit.", vpColor::red);
       vpDisplay::flush(I);

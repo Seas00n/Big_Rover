@@ -1,22 +1,23 @@
 {
-    "configurations": [
-        {
-            "browse": {
-                "databaseFilename": "${default}",
-                "limitSymbolsToIncludedHeaders": false
-            },
-            "includePath": [
-                "/opt/ros/noetic/include/**",
-                "/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/april_tag_pose/include/**",
-                "/usr/include/**",
-                "/opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/**"
-            ],
-            "name": "ROS",
-            "intelliSenseMode": "gcc-x64",
-            "compilerPath": "/usr/bin/gcc",
-            "cStandard": "gnu11",
-            "cppStandard": "c++14"
-        }
-    ],
-    "version": 4
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/opt/ros/noetic/include/**",
+        "/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/april_tag_pose/include/**",
+        "/usr/include/**",
+        "/opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include/**",
+        "/home/yuxuan/visp-ros/install/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
 }

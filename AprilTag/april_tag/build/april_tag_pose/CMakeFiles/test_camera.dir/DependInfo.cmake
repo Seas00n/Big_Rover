@@ -21,19 +21,21 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/home/yuxuan/visp-ros/install/include"
+  "/usr/include/ois"
   "/opt/ros/noetic/include"
   "/usr/include/opencv4"
-  "/opt/ros/noetic/include/depthai-shared/3rdparty"
-  "/opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include"
   "/usr/include/eigen3"
   "/usr/include/libxml2"
+  "/usr/include/libusb-1.0"
   "/usr/include/pcl-1.10"
   "/usr/include/vtk-7.1"
   "/usr/include/freetype2"
   "/usr/include/ni"
   "/usr/include/openni2"
   "/usr/include/OGRE"
-  "/usr/include/libusb-1.0"
+  "/opt/ros/noetic/include/depthai-shared/3rdparty"
+  "/opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/include"
   )
 
 # Targets to which this target links.
