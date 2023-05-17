@@ -55,12 +55,14 @@ CMAKE_BINARY_DIR = /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build
 # The main recursive "all" target.
 all: gtest/all
 all: april_tag_pose/all
+all: calibration/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
 preinstall: april_tag_pose/preinstall
+preinstall: calibration/preinstall
 
 .PHONY : preinstall
 
@@ -72,6 +74,7 @@ clean: CMakeFiles/tests.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
 clean: april_tag_pose/clean
+clean: calibration/clean
 
 .PHONY : clean
 
@@ -158,6 +161,24 @@ april_tag_pose/clean: april_tag_pose/CMakeFiles/test_pose.dir/clean
 april_tag_pose/clean: april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/clean
 
 .PHONY : april_tag_pose/clean
+
+#=============================================================================
+# Directory level rules for directory calibration
+
+# Recursive "all" directory target.
+calibration/all: calibration/CMakeFiles/camera_calibration.dir/all
+
+.PHONY : calibration/all
+
+# Recursive "preinstall" directory target.
+calibration/preinstall:
+
+.PHONY : calibration/preinstall
+
+# Recursive "clean" directory target.
+calibration/clean: calibration/CMakeFiles/camera_calibration.dir/clean
+
+.PHONY : calibration/clean
 
 #=============================================================================
 # Directory level rules for directory gtest
@@ -359,7 +380,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googlemock/CMakeFiles/gmoc
 gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles --progress-num=3,4 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles --progress-num=5,6 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -386,7 +407,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 gtest/googlemock/CMakeFiles/gmock.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles --progress-num=1,2 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles --progress-num=3,4 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -413,7 +434,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googletest/CMakeFiles/gtest_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles --progress-num=7,8 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles --progress-num=9,10 "Built target gtest_main"
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -440,7 +461,7 @@ gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles --progress-num=5,6 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles --progress-num=7,8 "Built target gtest"
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -467,7 +488,7 @@ gtest/googletest/CMakeFiles/gtest.dir/clean:
 april_tag_pose/CMakeFiles/open_cam.dir/all:
 	$(MAKE) -f april_tag_pose/CMakeFiles/open_cam.dir/build.make april_tag_pose/CMakeFiles/open_cam.dir/depend
 	$(MAKE) -f april_tag_pose/CMakeFiles/open_cam.dir/build.make april_tag_pose/CMakeFiles/open_cam.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles --progress-num=9,10 "Built target open_cam"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles --progress-num=11,12 "Built target open_cam"
 .PHONY : april_tag_pose/CMakeFiles/open_cam.dir/all
 
 # Build rule for subdir invocation for target.
@@ -710,7 +731,7 @@ april_tag_pose/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
 april_tag_pose/CMakeFiles/test_camera.dir/all:
 	$(MAKE) -f april_tag_pose/CMakeFiles/test_camera.dir/build.make april_tag_pose/CMakeFiles/test_camera.dir/depend
 	$(MAKE) -f april_tag_pose/CMakeFiles/test_camera.dir/build.make april_tag_pose/CMakeFiles/test_camera.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles --progress-num=13,14 "Built target test_camera"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles --progress-num=15,16 "Built target test_camera"
 .PHONY : april_tag_pose/CMakeFiles/test_camera.dir/all
 
 # Build rule for subdir invocation for target.
@@ -791,7 +812,7 @@ april_tag_pose/CMakeFiles/bond_generate_messages_cpp.dir/clean:
 april_tag_pose/CMakeFiles/pose_estimation.dir/all:
 	$(MAKE) -f april_tag_pose/CMakeFiles/pose_estimation.dir/build.make april_tag_pose/CMakeFiles/pose_estimation.dir/depend
 	$(MAKE) -f april_tag_pose/CMakeFiles/pose_estimation.dir/build.make april_tag_pose/CMakeFiles/pose_estimation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles --progress-num=11,12 "Built target pose_estimation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles --progress-num=13,14 "Built target pose_estimation"
 .PHONY : april_tag_pose/CMakeFiles/pose_estimation.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2141,7 +2162,7 @@ april_tag_pose/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/clean:
 april_tag_pose/CMakeFiles/test_pose.dir/all:
 	$(MAKE) -f april_tag_pose/CMakeFiles/test_pose.dir/build.make april_tag_pose/CMakeFiles/test_pose.dir/depend
 	$(MAKE) -f april_tag_pose/CMakeFiles/test_pose.dir/build.make april_tag_pose/CMakeFiles/test_pose.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles --progress-num=15,16 "Built target test_pose"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles --progress-num=17,18 "Built target test_pose"
 .PHONY : april_tag_pose/CMakeFiles/test_pose.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2187,6 +2208,33 @@ tf2_msgs_generate_messages_lisp: april_tag_pose/CMakeFiles/tf2_msgs_generate_mes
 april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/clean:
 	$(MAKE) -f april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/clean
 .PHONY : april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target calibration/CMakeFiles/camera_calibration.dir
+
+# All Build rule for target.
+calibration/CMakeFiles/camera_calibration.dir/all:
+	$(MAKE) -f calibration/CMakeFiles/camera_calibration.dir/build.make calibration/CMakeFiles/camera_calibration.dir/depend
+	$(MAKE) -f calibration/CMakeFiles/camera_calibration.dir/build.make calibration/CMakeFiles/camera_calibration.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles --progress-num=1,2 "Built target camera_calibration"
+.PHONY : calibration/CMakeFiles/camera_calibration.dir/all
+
+# Build rule for subdir invocation for target.
+calibration/CMakeFiles/camera_calibration.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 calibration/CMakeFiles/camera_calibration.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles 0
+.PHONY : calibration/CMakeFiles/camera_calibration.dir/rule
+
+# Convenience name for target.
+camera_calibration: calibration/CMakeFiles/camera_calibration.dir/rule
+
+.PHONY : camera_calibration
+
+# clean rule for target.
+calibration/CMakeFiles/camera_calibration.dir/clean:
+	$(MAKE) -f calibration/CMakeFiles/camera_calibration.dir/build.make calibration/CMakeFiles/camera_calibration.dir/clean
+.PHONY : calibration/CMakeFiles/camera_calibration.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

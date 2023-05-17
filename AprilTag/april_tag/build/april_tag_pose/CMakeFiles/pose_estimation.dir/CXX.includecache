@@ -18,7 +18,7 @@ visp3/detection/vpDetectorAprilTag.h
 visp3/core/vpXmlParserCamera.h
 -
 
-/home/yuxuan/visp-ros/install/include/visp_ros/vpROSGrabber.h
+/home/yuxuan/visp-ros/src/visp_ros/include/visp_ros/vpROSGrabber.h
 visp3/core/vpConfig.h
 -
 visp3/core/vpFrameGrabber.h

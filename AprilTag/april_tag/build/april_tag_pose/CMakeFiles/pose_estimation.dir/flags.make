@@ -6,5 +6,5 @@ CXX_FLAGS =  -fopenmp -fPIC -O2 -g -DNDEBUG   -std=c++17
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"april_tag_pose\"
 
-CXX_INCLUDES = -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/yuxuan/visp-ros/install/include -isystem /usr/include/opencv4 -isystem /usr/include/eigen3 -isystem /usr/include/libxml2 -isystem /usr/include/OGRE -isystem /usr/include/ois 
+CXX_INCLUDES = -I/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/april_tag_pose/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/yuxuan/visp-ros/devel/include -I/home/yuxuan/visp-ros/src/visp_ros/include -isystem /usr/include/opencv4 -isystem /usr/include/eigen3 -isystem /usr/include/libxml2 -isystem /usr/include/OGRE -isystem /usr/include/ois 
 

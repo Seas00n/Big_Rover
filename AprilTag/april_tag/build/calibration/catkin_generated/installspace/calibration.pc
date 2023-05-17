@@ -1,0 +1,8 @@
+prefix=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/install
+
+Name: calibration
+Description: Description of calibration
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

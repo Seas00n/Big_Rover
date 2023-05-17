@@ -22,7 +22,7 @@ catkin_package(
 )
 
 include_directories(
-# include
+  include
   ${catkin_INCLUDE_DIRS}
   ${OpenCV_INCLUDE_DIRS}
   ${VISP_INCLUDE_DIRS}
@@ -63,4 +63,6 @@ target_link_libraries(
   ${OpenCV_LIBS}
   )
 
+
 SET(CMAKE_BUILD_TYPE "RelWithDebInfo")
+

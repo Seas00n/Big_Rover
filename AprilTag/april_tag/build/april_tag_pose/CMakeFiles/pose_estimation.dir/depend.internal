@@ -3,7 +3,7 @@
 
 april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o
  /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/april_tag_pose/src/pose_estimation.cpp
- /home/yuxuan/visp-ros/install/include/visp_ros/vpROSGrabber.h
+ /home/yuxuan/visp-ros/src/visp_ros/include/visp_ros/vpROSGrabber.h
  /opt/ros/noetic/include/image_geometry/exports.h
  /opt/ros/noetic/include/image_geometry/pinhole_camera_model.h
  /opt/ros/noetic/include/ros/advertise_options.h

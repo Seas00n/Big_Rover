@@ -132,6 +132,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/gtest/cmake_install.cmake")
   include("/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/april_tag_pose/cmake_install.cmake")
+  include("/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/calibration/cmake_install.cmake")
 
 endif()
 

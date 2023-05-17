@@ -20,12 +20,14 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/april_tag_pose/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"
   "/usr/include/libxml2"
   "/usr/include/OGRE"
   "/usr/include/ois"
-  "/home/yuxuan/visp-ros/install/include"
+  "/home/yuxuan/visp-ros/devel/include"
+  "/home/yuxuan/visp-ros/src/visp_ros/include"
   "/opt/ros/noetic/include"
   "/usr/include/opencv4"
   "/opt/ros/noetic/include/depthai-shared/3rdparty"

@@ -106,3 +106,11 @@
 /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/april_tag_pose/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir
 /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/april_tag_pose/CMakeFiles/test_pose.dir
 /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_lisp.dir
+/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/calibration/CMakeFiles/install/strip.dir
+/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/calibration/CMakeFiles/install/local.dir
+/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/calibration/CMakeFiles/install.dir
+/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/calibration/CMakeFiles/list_install_components.dir
+/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/calibration/CMakeFiles/rebuild_cache.dir
+/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/calibration/CMakeFiles/edit_cache.dir
+/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/calibration/CMakeFiles/test.dir
+/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/calibration/CMakeFiles/camera_calibration.dir

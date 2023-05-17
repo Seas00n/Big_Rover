@@ -1116,6 +1116,19 @@ tf2_msgs_generate_messages_lisp/fast:
 	$(MAKE) -f april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
 .PHONY : tf2_msgs_generate_messages_lisp/fast
 
+#=============================================================================
+# Target rules for targets named camera_calibration
+
+# Build rule for target.
+camera_calibration: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 camera_calibration
+.PHONY : camera_calibration
+
+# fast build rule for target.
+camera_calibration/fast:
+	$(MAKE) -f calibration/CMakeFiles/camera_calibration.dir/build.make calibration/CMakeFiles/camera_calibration.dir/build
+.PHONY : camera_calibration/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1202,6 +1215,7 @@ help:
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... test_pose"
 	@echo "... tf2_msgs_generate_messages_lisp"
+	@echo "... camera_calibration"
 .PHONY : help
 
 

@@ -194,8 +194,8 @@ pose_estimation_EXTERNAL_OBJECTS =
 /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel/lib/april_tag_pose/pose_estimation: /opt/ros/noetic/lib/x86_64-linux-gnu/libvisp_gui.so.3.5.0
 /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel/lib/april_tag_pose/pose_estimation: /opt/ros/noetic/lib/x86_64-linux-gnu/libvisp_detection.so.3.5.0
 /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel/lib/april_tag_pose/pose_estimation: /opt/ros/noetic/lib/x86_64-linux-gnu/libvisp_ar.so.3.5.0
-/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel/lib/april_tag_pose/pose_estimation: /home/yuxuan/visp-ros/install/lib/libvisp_ros.so
-/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel/lib/april_tag_pose/pose_estimation: /home/yuxuan/visp-ros/install/lib/libvisp_ros_bebop2_visual_servo_nodelet.so
+/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel/lib/april_tag_pose/pose_estimation: /home/yuxuan/visp-ros/devel/lib/libvisp_ros.so
+/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel/lib/april_tag_pose/pose_estimation: /home/yuxuan/visp-ros/devel/lib/libvisp_ros_bebop2_visual_servo_nodelet.so
 /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel/lib/april_tag_pose/pose_estimation: /opt/ros/noetic/lib/libcv_bridge.so
 /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel/lib/april_tag_pose/pose_estimation: /opt/ros/noetic/lib/libimage_geometry.so
 /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel/lib/april_tag_pose/pose_estimation: /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.4.2.0
@@ -365,8 +365,8 @@ pose_estimation_EXTERNAL_OBJECTS =
 /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel/lib/april_tag_pose/pose_estimation: /usr/lib/x86_64-linux-gnu/libpython3.8.so
 /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel/lib/april_tag_pose/pose_estimation: /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0
 /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel/lib/april_tag_pose/pose_estimation: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
-/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel/lib/april_tag_pose/pose_estimation: /home/yuxuan/visp-ros/install/lib/libvisp_ros.so
-/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel/lib/april_tag_pose/pose_estimation: /home/yuxuan/visp-ros/install/lib/libvisp_ros_bebop2_visual_servo_nodelet.so
+/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel/lib/april_tag_pose/pose_estimation: /home/yuxuan/visp-ros/devel/lib/libvisp_ros.so
+/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel/lib/april_tag_pose/pose_estimation: /home/yuxuan/visp-ros/devel/lib/libvisp_ros_bebop2_visual_servo_nodelet.so
 /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel/lib/april_tag_pose/pose_estimation: /opt/ros/noetic/lib/libimage_geometry.so
 /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel/lib/april_tag_pose/pose_estimation: /opt/ros/noetic/lib/libnodeletlib.so
 /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel/lib/april_tag_pose/pose_estimation: /opt/ros/noetic/lib/libbondcpp.so

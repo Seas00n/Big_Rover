@@ -355,9 +355,6 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests3
 
-//The directory containing a CMake configuration file for OpenCV4.
-OpenCV4_DIR:PATH=OpenCV4_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for OpenCV.
 OpenCV_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/opencv4
 
@@ -397,9 +394,6 @@ VISP_CONFIG_PATH:PATH=/opt/ros/noetic/lib/x86_64-linux-gnu/cmake/visp
 //The directory containing a CMake configuration file for VISP.
 VISP_DIR:PATH=/opt/ros/noetic/lib/x86_64-linux-gnu/cmake/visp
 
-//The directory containing a CMake configuration file for VISP_ROS.
-VISP_ROS_DIR:PATH=VISP_ROS_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for XLink.
 XLink_DIR:PATH=/opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/lib/cmake/XLink
 
@@ -432,6 +426,12 @@ bond_DIR:PATH=/opt/ros/noetic/share/bond/cmake
 
 //The directory containing a CMake configuration file for bondcpp.
 bondcpp_DIR:PATH=/opt/ros/noetic/share/bondcpp/cmake
+
+//Value Computed by CMake
+calibration_BINARY_DIR:STATIC=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/calibration
+
+//Value Computed by CMake
+calibration_SOURCE_DIR:STATIC=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/calibration
 
 //The directory containing a CMake configuration file for camera_calibration_parsers.
 camera_calibration_parsers_DIR:PATH=/opt/ros/noetic/share/camera_calibration_parsers/cmake
@@ -545,9 +545,6 @@ nlohmann_json_DIR:PATH=/opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/depend
 //The directory containing a CMake configuration file for nodelet.
 nodelet_DIR:PATH=/opt/ros/noetic/share/nodelet/cmake
 
-//The directory containing a CMake configuration file for opencv.
-opencv_DIR:PATH=opencv_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/noetic/share/pluginlib/cmake
 
@@ -608,14 +605,11 @@ tf_DIR:PATH=/opt/ros/noetic/share/tf/cmake
 //The directory containing a CMake configuration file for usb-1.0.
 usb-1.0_DIR:PATH=/opt/ros/noetic/lib/x86_64-linux-gnu/cmake/depthai/dependencies/lib/cmake/XLink/dependencies/lib/cmake/usb-1.0
 
-//The directory containing a CMake configuration file for vis_ros.
-vis_ros_DIR:PATH=vis_ros_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for visp_bridge.
 visp_bridge_DIR:PATH=/opt/ros/noetic/share/visp_bridge/cmake
 
 //The directory containing a CMake configuration file for visp_ros.
-visp_ros_DIR:PATH=/home/yuxuan/visp-ros/install/share/visp_ros/cmake
+visp_ros_DIR:PATH=/home/yuxuan/visp-ros/devel/share/visp_ros/cmake
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/noetic/share/xmlrpcpp/cmake
@@ -768,7 +762,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

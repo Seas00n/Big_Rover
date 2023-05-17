@@ -3,6 +3,19 @@
 // Includes common necessary includes for development using depthai library
 #include "depthai/depthai.hpp"
 
+template<typename ... Args>
+static std::string str_format(const std::string& format, Args ... args)
+{
+	auto size_buf = std::snprintf(nullptr, 0, format.c_str(), args ...) + 1;
+	std::unique_ptr<char[]> buf(new(std::nothrow) char[size_buf]);
+
+	if (!buf)
+		return std::string("");
+
+	std::snprintf(buf.get(), size_buf, format.c_str(), args ...);
+	return std::string(buf.get(), buf.get() + size_buf - 1);
+}
+
 int main() {
     using namespace std;
     // Create pipeline
@@ -43,6 +56,9 @@ int main() {
     // Output queue will be used to get the rgb frames from the output defined above
     auto qRgb = device.getOutputQueue("rgb", 4, false);
 
+
+    int num_of_calibration = 30;
+    int num_images = 0;
     while(true) {
         auto inRgb = qRgb->get<dai::ImgFrame>();
 
@@ -52,7 +68,15 @@ int main() {
         int key = cv::waitKey(1);
         if(key == 'q' || key == 'Q') {
             break;
+        }else if(key=='t'||key=='T'){
+            if(num_images< num_of_calibration){
+                std::string path = str_format("/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/calibration/src/chessboard-%02d.jpg",num_images);
+                cv::imwrite(path,inRgb->getCvFrame());
+                std::cout<<"Store "<<num_images<<"Pictures"<<std::endl;
+                num_images++;
+            }
         }
     }
+    device.close();
     return 0;
 }

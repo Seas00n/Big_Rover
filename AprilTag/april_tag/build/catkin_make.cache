@@ -1,2 +1,2 @@
-april_tag_pose
+april_tag_pose:calibration
 -DCATKIN_DEVEL_PREFIX=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/devel -DCMAKE_INSTALL_PREFIX=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/install -G Unix Makefiles

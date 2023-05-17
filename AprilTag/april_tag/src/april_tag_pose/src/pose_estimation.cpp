@@ -9,11 +9,14 @@
 int main(int argc, const char** argv){
     vpDetectorAprilTag::vpAprilTagFamily tagFamily = vpDetectorAprilTag::TAG_36h11;
     vpDetectorAprilTag::vpPoseEstimationMethod poseEstimationMethod = vpDetectorAprilTag::HOMOGRAPHY_VIRTUAL_VS;
-    double tagSize = 0.053;
-    float quad_decimate = 1.0;
+    double tagSize = 0.077;
+    float quad_decimate = 0.1;
+    std::string intrinsic_file = "/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/april_tag_pose/src/camera.xml";
     vpCameraParameters cam;
-    cam.initPersProjWithoutDistortion(615.1674805, 615.1675415, 312.1889954, 243.4373779);
-    
+    cam.init();
+    vpXmlParserCamera parser;
+    parser.parse(cam,intrinsic_file,"",
+    vpCameraParameters::perspectiveProjWithDistortion);
 
 
     try{
@@ -40,12 +43,18 @@ int main(int argc, const char** argv){
             vpDisplay::display(I);
             double t = vpTime::measureTimeMs();
             std::vector<vpHomogeneousMatrix> cMo_vec;
+            vpTranslationVector trans;
+            vpRzyzVector eular_angle; 
             dynamic_cast<vpDetectorAprilTag *>(detector)->detect(I, tagSize, cam, cMo_vec);
             time_vec.push_back(t-t0);
             vpDisplay::displayText(I,20,20,"Click to quit...",vpColor::red);
             for(size_t i=0;i<cMo_vec.size();i++){
                 vpDisplay::displayFrame(I,cMo_vec[i],cam,tagSize/2,vpColor::none,3);
+                trans = cMo_vec[i].getTranslationVector();
+                eular_angle.buildFrom(cMo_vec[i].getRotationMatrix());
             }
+            std::cout<<"T"<<trans<<std::endl;
+            std::cout<<"Angle"<<eular_angle<<std::endl;
             vpDisplay::flush(I);
             if(vpDisplay::getClick(I,false)){
                 break;
