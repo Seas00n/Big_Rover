@@ -52,3 +52,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/april_tag_pose" TYPE FILE FILES "/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/april_tag_pose/package.xml")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/april_tag_pose" TYPE PROGRAM FILES "/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/april_tag_pose/catkin_generated/installspace/pose_listener.py")
+endif()
+

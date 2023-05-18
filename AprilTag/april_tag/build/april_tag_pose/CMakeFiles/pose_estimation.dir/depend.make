@@ -3,6 +3,10 @@
 
 april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/april_tag_pose/src/pose_estimation.cpp
 april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /home/yuxuan/visp-ros/src/visp_ros/include/visp_ros/vpROSGrabber.h
+april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/geometry_msgs/Quaternion.h
+april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/geometry_msgs/Transform.h
+april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/geometry_msgs/TransformStamped.h
+april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/geometry_msgs/Vector3.h
 april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/image_geometry/exports.h
 april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/image_geometry/pinhole_camera_model.h
 april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/ros/advertise_options.h
@@ -66,6 +70,12 @@ april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ro
 april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/sensor_msgs/Image.h
 april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/sensor_msgs/RegionOfInterest.h
 april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/std_msgs/Header.h
+april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/tf2/LinearMath/MinMax.h
+april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/tf2/LinearMath/QuadWord.h
+april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/tf2/LinearMath/Quaternion.h
+april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/tf2/LinearMath/Scalar.h
+april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/tf2/LinearMath/Vector3.h
+april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/tf2_ros/transform_broadcaster.h
 april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/visp/vpCameraParameters.h
 april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/visp/vpDisplayX.h
 april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o: /opt/ros/noetic/include/visp/vpImage.h

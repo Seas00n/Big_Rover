@@ -7,6 +7,10 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   cv_bridge
   image_transport
+  tf2
+  tf2_ros
+  tf2_geometry_msgs
+  geometry_msgs
 )
 # please install visp and visp ros as https://github.com/lagadic/visp_ros
 find_package(depthai CONFIG REQUIRED)
@@ -63,6 +67,10 @@ target_link_libraries(
   ${OpenCV_LIBS}
   )
 
+catkin_install_python(PROGRAMS
+  scripts/pose_listener.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
 
 SET(CMAKE_BUILD_TYPE "RelWithDebInfo")
-
