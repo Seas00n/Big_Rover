@@ -97,7 +97,10 @@ rover_control_EXTERNAL_OBJECTS =
 /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/rover_control/rover_control: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/rover_control/rover_control: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
 /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/rover_control/rover_control: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/rover_control/rover_control: /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/DynamixelSDK/libdxl_x64_cpp.so
+/home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/rover_control/rover_control: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+/home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/rover_control/rover_control: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+/home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/rover_control/rover_control: /home/yuxuan/Downloads/encoder_motor_steering/DynamixelSDK/libdxl_x64_cpp.so
+/home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/rover_control/rover_control: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.71.0
 /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/rover_control/rover_control: rover_control/CMakeFiles/rover_control.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yuxuan/Project/Big_Rover/Carcontrol/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/rover_control/rover_control"
 	cd /home/yuxuan/Project/Big_Rover/Carcontrol/build/rover_control && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rover_control.dir/link.txt --verbose=$(VERBOSE)

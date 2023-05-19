@@ -7,7 +7,7 @@ if __name__=="__main__":
     rospy.init_node("listener_pose")
     buffer = tf2_ros.Buffer()
     listener = tf2_ros.TransformListener(buffer)
-    rate = rospy.Rate(1)
+    rate = rospy.Rate(100)
     point_source1 = PointStamped()
     point_source1.header.frame_id = "son1"
     point_source1.point.x = 0.001

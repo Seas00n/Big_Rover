@@ -7,5 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PKG_CONFIG_PATH="/home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/yuxuan/Project/Big_Rover/Carcontrol/build'

@@ -1,181 +1,198 @@
-#include "spine/dynamixel_motor.h"
-#include "spine/socketcan.h"
-#include "spine/minicheetah_motor.h"
 #include <iostream>
-#include <cmath>
-
-#include "assert.h"
-
-#if defined(_WIN32)
-#include <windows.h>
-#endif
-
-#include <atomic>
-#include <ctime>
-#include <chrono>
-#include <csignal>
 #include <math.h>
+#include "spine/socketcan.h"
+#include "spine/dynamixel_motor.h"
+#include "spine/minicheetah_motor.h"
+#include "msg_.hpp"
+#include "rover_control/corner.h"
+#include "turtlesim/Pose.h"
+#include "ros/ros.h"
+extern std::vector<wheelMotorTypeDef> wheels;//车轮软件抽象
+extern std::vector<steeringMotorTypeDef> steers;//舵机软件抽象
+struct RoverTypeDef rover_temp;
 
-using namespace std::chrono;
+bool is_thread_ok = true;
 
+#define PI 3.141592657
+#define wheel_to_center_x 10.0
+#define wheel_to_center_y 10.0
+#define wheel_to_center sqrt(pow(wheel_to_center_x,2)+pow(wheel_to_center_y,2))
+#define cal_distance(x,y) sqrt(pow(x,2)+pow(y,2))
 
-bool over_current = false;
-
-float uint_to_float(int x_int, float x_min, float x_max, int bits) {
-  /// converts unsigned int to float, given range and number of bits ///
-  float span = x_max - x_min;
-  float offset = x_min;
-  return ((float)x_int)*span/((float)((1<<bits)-1)) + offset;
-}
-
-// 接收电机返回读数
-void rxThread(SocketCan *sc) {
-    sc->clearRxCallback();
-    float P_MIN = -12.5f;
-    float P_MAX = 12.5f;
-    float V_MIN = -30.0f;
-    float V_MAX = 30.0f;
-    float I_MAX = 18.0f;
-    struct can_frame frame {};
-    while (true)
-    {
-      *sc >> frame;
-      int id = frame.data[0];
-      if (id == 1 || id == 2 || id == 3 || id == 4)
-      {
-        int p_int = (frame.data[1]<<8)|frame.data[2]; 
-        int v_int = (frame.data[3]<<4)|(frame.data[4]>>4);
-        int i_int = ((frame.data[4]&0xF)<<8)|frame.data[5];
-        int T_int = frame.data[6];
-        float p = uint_to_float(p_int, P_MIN, P_MAX, 16);
-        float v = uint_to_float(v_int, V_MIN, V_MAX, 12);
-        float i = uint_to_float(i_int, -I_MAX, I_MAX, 12);
-        float T_f = T_int;
-        float T = T_f - 40;
-        printf("id = %d\tp = %f\tv = %f\ti = %fT = %f\n", id, p, v, i, T);
-
-        // 过流保护
-        if(i > 10 || i < -10)
-        {
-          over_current = true;
-          std::cout << "rx exit" << std::endl;
-          return;
-        }
-      }
-      std::this_thread::sleep_for(std::chrono::milliseconds(5));
-    }
-}
-
-// 持续发指令给电机使电机返回读数
-void txThread(AK10_9Motor *motor, double vel1, double vel2) {
-  while (true)
+void canRxThread(SocketCan *sc){
+  sc->clearRxCallback();
+  struct can_frame frame
   {
-    if (over_current)
-    {
-      for (int i = 0; i < 4; i++)
-      {
-        double velocity = 0.0;
-        motor[i].setQdDes(velocity); // target velocity
-        motor[i].setKpKd(0, 4); // Kd for torque in velocity mode
-        motor[i].control();
-        std::this_thread::sleep_for(std::chrono::milliseconds(10));
-      }
-      std::cout << "tx exit" << std::endl;
+    /* data */
+  };
+  while(is_thread_ok){
+    *sc >> frame;
+    if(depackMsg(frame)){
+
+    }else{
+      is_thread_ok = false;
       return;
     }
-    
-    for (int i = 0; i < 4; i++)
-    {
-      double velocity = 0.0;
-      if (i % 2 == 0)
-      {
-        velocity = vel1 * (int)pow(-1, i); // at least 0.2
+    thread_sleep(5);
+  }
+}
+
+
+void cmdTxThread(std::vector<AK10_9Motor> wheel_Motor,
+                  std::vector<DynamixelMotor> steering_Motor){
+    while(is_thread_ok){
+      for(int i=0;i<wheel_Motor.size();i++){
+        steering_Motor[i].setQDes(steers[i].pos_desired);
+        wheel_Motor[i].setQdDes(wheels[i].vel_desired);
+        wheel_Motor[i].setKpKd(0,4);
+        steering_Motor[i].control();
+        thread_sleep(5);
+        wheel_Motor[i].control();
+        thread_sleep(5);
       }
-      else
-      {
-        velocity = vel2 * (int)pow(-1, i);
-      }
-      // aMotor[i].setQDes(10 * (int)pow(-1, i)); // target location
-      motor[i].setQdDes(velocity); // target velocity
-      motor[i].setKpKd(0, 4); // Kd for torque in velocity mode
-      motor[i].control();
-      std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    }
+}
+void BicycleControl(const turtlesim::Pose::ConstPtr& p){
+  rover_temp.rover_v = p->linear_velocity;
+  rover_temp.rover_w = p->angular_velocity;
+  wheels[3].vel_desired = rover_temp.rover_v;
+  wheels[4].vel_desired = rover_temp.rover_v;
+  double steer_angle = atan2(rover_temp.rover_w*2*wheel_to_center_y/rover_temp.rover_v,1.0);
+  double turn_radius = 2*wheel_to_center_y/(tan(steer_angle));
+  steers[0].pos_desired = steer_angle;
+  steers[1].pos_desired = steer_angle;
+  steers[2].pos_desired = 0;
+  steers[3].pos_desired = 0;
+  wheels[0].vel_desired = rover_temp.rover_v/turn_radius*cal_distance(turn_radius,2*wheel_to_center_y);
+  wheels[1].vel_desired = wheels[0].vel_desired;
+}
+
+void AckermanControl(const turtlesim::Pose::ConstPtr& p){
+  rover_temp.rover_v = p->linear_velocity;
+  rover_temp.rover_w = p->angular_velocity;
+  wheels[3].vel_desired = rover_temp.rover_v;
+  wheels[4].vel_desired = rover_temp.rover_v;
+  double steer_angle = atan2(rover_temp.rover_w*2*wheel_to_center_y/rover_temp.rover_v,1.0);
+  double turn_radius = 2*wheel_to_center_y/(tan(steer_angle));
+  steers[0].pos_desired = atan2(2*wheel_to_center_y,turn_radius+wheel_to_center_x);
+  steers[1].pos_desired = atan2(2*wheel_to_center_y,turn_radius-wheel_to_center_x);
+  steers[2].pos_desired = 0;
+  steers[3].pos_desired = 0;
+  wheels[0].vel_desired = rover_temp.rover_v/turn_radius*cal_distance(turn_radius+wheel_to_center_x,2*wheel_to_center_y);
+  wheels[1].vel_desired = rover_temp.rover_v/turn_radius*cal_distance(turn_radius-wheel_to_center_x,2*wheel_to_center_y);
+}
+
+void FSMControl(const turtlesim::Pose::ConstPtr& p){
+  if(rover_temp.rover_motion_state==GO_AHEAD){
+    rover_temp.rover_v = p->linear_velocity;
+    rover_temp.rover_w = 0;
+    for(int i=0;i<4;i++){
+      wheels[i].vel_desired = rover_temp.rover_v;
+      steers[i].pos_desired = 0;
+    }
+    if(abs(p->angular_velocity)>0.1){
+      rover_temp.rover_motion_state = CHANGE_TO_TURN;
+    }
+  }else if (rover_temp.rover_motion_state = CHANGE_TO_TURN){
+    rover_temp.rover_v = 0;
+    rover_temp.rover_w = 0;
+    steers[0].pos_desired = 45.0*PI/180.0;
+    steers[1].pos_desired = -45.0*PI/180.0;
+    steers[2].pos_desired = -45.0*PI/180.0;
+    steers[3].pos_desired = 45.0*PI/180.0;
+    double error = (steers[0].pos_actual+steers[1].pos_actual+steers[2].pos_actual+steers[3].pos_actual)-
+                    (steers[0].pos_actual+steers[1].pos_actual+steers[2].pos_actual+steers[3].pos_actual);
+    if(abs(error)<0.01){
+      rover_temp.rover_motion_state = TURN;
+    }
+  }else if(rover_temp.rover_motion_state == TURN){
+    rover_temp.rover_v = 0;
+    rover_temp.rover_w = p->angular_velocity;
+    double wheel_turn = rover_temp.rover_w*wheel_to_center;
+    for(int i=0;i<4;i++){
+      wheels[i].vel_desired = wheel_turn;
+    }
+    steers[0].pos_desired = 45.0*PI/180.0;
+    steers[1].pos_desired = -45.0*PI/180.0;
+    steers[2].pos_desired = -45.0*PI/180.0;
+    steers[3].pos_desired = 45.0*PI/180.0;
+    if(abs(p->linear_velocity)>0.5){
+      rover_temp.rover_motion_state = CHANGE_TO_GO;
+    }
+  }else if(rover_temp.rover_motion_state = CHANGE_TO_GO){
+    rover_temp.rover_v = 0;
+    rover_temp.rover_w = 0;
+    steers[0].pos_desired = 0;
+    steers[1].pos_desired = 0;
+    steers[2].pos_desired = 0;
+    steers[3].pos_desired = 0;
+    double error = (steers[0].pos_actual+steers[1].pos_actual+steers[2].pos_actual+steers[3].pos_actual)-
+                    (steers[0].pos_actual+steers[1].pos_actual+steers[2].pos_actual+steers[3].pos_actual);
+    if(abs(error)<0.01){
+      rover_temp.rover_motion_state = GO_AHEAD;
     }
   }
 }
 
-int main() {
-  // Initialize
 
-  SocketCan can("can0", 1e6);
+int main(int argc, char *argv[]){
+  SocketCan can("can0",1e6);
+  std::vector<DynamixelMotor> steering_Motor;//舵机硬件抽象
+  steering_Motor.push_back(DynamixelMotor(1,"/dev/ttyUSB0"));
+  steering_Motor.push_back(DynamixelMotor(2,"/dev/ttyUSB0"));
+  steering_Motor.push_back(DynamixelMotor(3,"/dev/ttyUSB0"));
+  steering_Motor.push_back(DynamixelMotor(4,"/dev/ttyUSB0"));
+  thread_sleep(5);
 
-  // Steering
-  DynamixelMotor dMotor[4] = {
-    DynamixelMotor(1, "/dev/ttyUSB0"), DynamixelMotor(2, "/dev/ttyUSB0"),
-    DynamixelMotor(3, "/dev/ttyUSB0"), DynamixelMotor(4, "/dev/ttyUSB0")};
-  std::this_thread::sleep_for(std::chrono::milliseconds(5));
+  std::vector<AK10_9Motor> wheel_Motor;//车轮硬件抽象
+  wheel_Motor.push_back(AK10_9Motor());
+  wheel_Motor.push_back(AK10_9Motor());
+  wheel_Motor.push_back(AK10_9Motor());
+  wheel_Motor.push_back(AK10_9Motor());
+  wheel_Motor[0].attach(1,&can);thread_sleep(5);
+  wheel_Motor[1].attach(2,&can);thread_sleep(5);
+  wheel_Motor[2].attach(3,&can);thread_sleep(5);
+  wheel_Motor[3].attach(4,&can);thread_sleep(5);
 
-  // Motor
-  // AK10_9Motor motor0, motor1, motor2, motor3;
-  AK10_9Motor aMotor[4];
-  for (int i = 0; i < 4; i++)
-  {
-    aMotor[i].attach(i + 1, &can);
-    std::this_thread::sleep_for(std::chrono::milliseconds(5));
+  setlocale(LC_ALL, "");
+  ros::init(argc, argv, "control");
+  ros::NodeHandle nh;  
+  ros::Rate loop_rate(500);
+  ROS_INFO_STREAM("节点初始化完成");
+  //分布电机数据便于存储
+  std::vector<rover_control::corner> corners;
+  corners.push_back(rover_control::corner());
+  corners.push_back(rover_control::corner());
+  corners.push_back(rover_control::corner());
+  corners.push_back(rover_control::corner());
+
+  ros::Publisher pub1 = nh.advertise<rover_control::corner>("corner1",100);
+  ros::Publisher pub2 = nh.advertise<rover_control::corner>("corner2",100);
+  ros::Publisher pub3 = nh.advertise<rover_control::corner>("corner3",100);
+  ros::Publisher pub4 = nh.advertise<rover_control::corner>("corner4",100);
+  //订阅无人车状态便于控制
+  ros::Subscriber sub = nh.subscribe<turtlesim::Pose>("/turtle1/pose",1000,BicycleControl);
+  //初始化所有电机
+  for(int i=0;i<wheels.size();i++){
+    wheels[i].pos_desired = 0;
+    wheels[i].vel_desired = 0;
+    steers[i].pos_desired = 0;
   }
-  std::thread canRx(rxThread, &can);
+
+  std::thread canRx(canRxThread, &can);
   canRx.detach();
-
-  // Initialize End
-
-
-  // Control
-  // std::cout << "Press any key to continue";
-  // std::cin.get();
-
-  // Steering
-  for (auto &dm : dMotor)
-  {
-    dm.setQDes(0); // target angle
-    dm.control();
-    std::this_thread::sleep_for(std::chrono::milliseconds(5));
+  std::thread cmdTx(cmdTxThread, wheel_Motor,steering_Motor);
+  cmdTx.detach();
+  while(ros::ok()&&is_thread_ok){
+    ros::spinOnce();
+    loop_rate.sleep();
+    UpdateMessage(corners);
+    pub1.publish(corners[0]);
+    pub2.publish(corners[1]);
+    pub3.publish(corners[2]);
+    pub4.publish(corners[3]);
   }
-
-  // Motor
-  double vel1 = 0.4;
-  double vel2 = 0.4;
-  for (int i = 0; i < 4; i++)
-  {
-    double velocity = 0.0;
-    if (i % 2 == 0)
-    {
-      velocity = vel1 * (int)pow(-1, i); // at least 0.2
-    }
-    else
-    {
-      velocity = vel2 * (int)pow(-1, i);
-    }
-    // aMotor[i].setQDes(10 * (int)pow(-1, i)); // target location
-    aMotor[i].setQdDes(velocity); // target velocity
-    aMotor[i].setKpKd(0, 4); // Kd for torque in velocity mode
-    aMotor[i].control();
-    std::this_thread::sleep_for(std::chrono::milliseconds(5));
-  }
-  std::thread canTx(txThread, aMotor, vel1, vel2);
-  canTx.detach();
-
-  // Control End
-
-  // char perms[]="rwxrwxr-x"; // 509
-  // int bits = 0;
-  // for(int i=0; i<9; i++){
-  //   if (perms[i] != '-') {
-  //     bits |= 1<<(8-i);
-  //   }
-  // }
-  // printf("%d\n", bits);
-  
-  // std::this_thread::sleep_for(std::chrono::milliseconds(5000));
-
+  ros::shutdown();
+  is_thread_ok = false;
   return 0;
 }

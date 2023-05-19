@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC   -std=gnu++14
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"rover_control\" -Dspine_EXPORTS
 
-CXX_INCLUDES = -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/src/spine -isystem /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/DynamixelSDK/include/dynamixel_sdk 
+CXX_INCLUDES = -I/home/yuxuan/Project/Big_Rover/Carcontrol/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/src/spine -isystem /home/yuxuan/Downloads/encoder_motor_steering/DynamixelSDK/include/dynamixel_sdk 
 

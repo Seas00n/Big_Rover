@@ -6,13 +6,13 @@ rover_control/src/spine/CMakeFiles/spine.dir/briter_encoder.cpp.o
  /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/src/spine/briter_encoder.h
  /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/src/spine/socketcan.h
 rover_control/src/spine/CMakeFiles/spine.dir/dynamixel_motor.cpp.o
- /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/DynamixelSDK/include/dynamixel_sdk/dynamixel_sdk.h
- /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/DynamixelSDK/include/dynamixel_sdk/group_bulk_read.h
- /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/DynamixelSDK/include/dynamixel_sdk/group_bulk_write.h
- /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/DynamixelSDK/include/dynamixel_sdk/group_sync_read.h
- /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/DynamixelSDK/include/dynamixel_sdk/group_sync_write.h
- /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/DynamixelSDK/include/dynamixel_sdk/packet_handler.h
- /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/DynamixelSDK/include/dynamixel_sdk/port_handler.h
+ /home/yuxuan/Downloads/encoder_motor_steering/DynamixelSDK/include/dynamixel_sdk/dynamixel_sdk.h
+ /home/yuxuan/Downloads/encoder_motor_steering/DynamixelSDK/include/dynamixel_sdk/group_bulk_read.h
+ /home/yuxuan/Downloads/encoder_motor_steering/DynamixelSDK/include/dynamixel_sdk/group_bulk_write.h
+ /home/yuxuan/Downloads/encoder_motor_steering/DynamixelSDK/include/dynamixel_sdk/group_sync_read.h
+ /home/yuxuan/Downloads/encoder_motor_steering/DynamixelSDK/include/dynamixel_sdk/group_sync_write.h
+ /home/yuxuan/Downloads/encoder_motor_steering/DynamixelSDK/include/dynamixel_sdk/packet_handler.h
+ /home/yuxuan/Downloads/encoder_motor_steering/DynamixelSDK/include/dynamixel_sdk/port_handler.h
  /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/src/spine/dynamixel_motor.cpp
  /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/src/spine/dynamixel_motor.h
  /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/src/spine/motor.h

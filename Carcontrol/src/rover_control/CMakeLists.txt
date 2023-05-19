@@ -11,8 +11,14 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
-)
+  message_generation
+  turtlesim
 
+)
+find_package(Boost REQUIRED COMPONENTS
+  system
+  thread
+)
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -52,6 +58,10 @@ find_package(catkin REQUIRED COMPONENTS
 #   Message1.msg
 #   Message2.msg
 # )
+add_message_files(
+  FILES
+  corner.msg
+)
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -72,7 +82,10 @@ find_package(catkin REQUIRED COMPONENTS
 #   DEPENDENCIES
 #   std_msgs
 # )
-
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+)
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
 ################################################
@@ -105,8 +118,8 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES rover_control
-#  CATKIN_DEPENDS roscpp rospy std_msgs
-#  DEPENDS system_lib
+ CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
+ DEPENDS system_lib Boost
 )
 
 ###########
@@ -118,6 +131,7 @@ catkin_package(
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
+  ${Boost_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -209,4 +223,10 @@ add_executable(rover_control src/main_draft.cpp)
 target_link_libraries(rover_control 
   spine
   ${catkin_LIBRARIES}
+  ${Boost_LIBRARIES}
+  )
+catkin_install_python(PROGRAMS
+  scripts/joy_listener.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
+SET(CMAKE_BUILD_TYPE "RelWithDebInfo")

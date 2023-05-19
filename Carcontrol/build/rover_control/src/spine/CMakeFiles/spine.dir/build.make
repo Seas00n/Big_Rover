@@ -124,7 +124,7 @@ spine_EXTERNAL_OBJECTS =
 /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/libspine.so: rover_control/src/spine/CMakeFiles/spine.dir/dynamixel_motor.cpp.o
 /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/libspine.so: rover_control/src/spine/CMakeFiles/spine.dir/briter_encoder.cpp.o
 /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/libspine.so: rover_control/src/spine/CMakeFiles/spine.dir/build.make
-/home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/libspine.so: /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/DynamixelSDK/libdxl_x64_cpp.so
+/home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/libspine.so: /home/yuxuan/Downloads/encoder_motor_steering/DynamixelSDK/libdxl_x64_cpp.so
 /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/libspine.so: rover_control/src/spine/CMakeFiles/spine.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yuxuan/Project/Big_Rover/Carcontrol/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/libspine.so"
 	cd /home/yuxuan/Project/Big_Rover/Carcontrol/build/rover_control/src/spine && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/spine.dir/link.txt --verbose=$(VERBOSE)

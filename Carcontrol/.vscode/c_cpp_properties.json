@@ -12,7 +12,9 @@
         "/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/calibration/include/**",
         "/home/yuxuan/visp-ros/src/visp_ros/include/**",
         "/usr/include/**",
-        "/home/yuxuan/Project/Big_Rover/Carcontrol/rover_control"
+        "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/src/**",
+        "/home/yuxuan/Project/Big_Rover/Carcontrol/devel/include/**",
+        "/home/yuxuan/Downloads/encoder_motor_steering/DynamixelSDK/include/dynamixel_sdk/**",
       ],
       "name": "ROS",
       "intelliSenseMode": "gcc-x64",

@@ -1,0 +1,3 @@
+<launch>
+    <node pkg = "rover_control" type = "rover_control" name="rover_ctrl"/>
+</launch>
