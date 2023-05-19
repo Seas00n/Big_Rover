@@ -5,12 +5,9 @@ from geometry_msgs.msg import Twist
 import math
 
 
-
-
-
-f = 3
-z = 0.3
-r = 0.02
+f = 2
+z = 2
+r = 0.0
 k1 = z/math.pi/f
 k2 = 1/((2*math.pi*f)*(2*math.pi*f))
 k3 = r*z/(2*math.pi*f)
@@ -34,9 +31,9 @@ def callback(data):
     axes1 = data.axes[0]
     axes2 = data.axes[1]
     if axes2>0:
-        car_vnew = math.sqrt(axes1*axes1+axes2*axes2)*2
+        car_vnew = math.sqrt(axes1*axes1+axes2*axes2)*4
     else:
-        car_vnew = -math.sqrt(axes1*axes1+axes2*axes2)*2
+        car_vnew = -math.sqrt(axes1*axes1+axes2*axes2)*4
     axes3 = data.axes[3]
     car_wnew = axes3*5
 
