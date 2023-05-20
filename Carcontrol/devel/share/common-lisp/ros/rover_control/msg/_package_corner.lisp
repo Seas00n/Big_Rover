@@ -11,4 +11,8 @@
           STEER_POS_ACTUAL
           STEER_POS_DESIRED-VAL
           STEER_POS_DESIRED
+          STEER_VEL_ACTUAL-VAL
+          STEER_VEL_ACTUAL
+          STEER_VEL_DESIRED-VAL
+          STEER_VEL_DESIRED
 ))

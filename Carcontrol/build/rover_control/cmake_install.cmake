@@ -38,7 +38,10 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rover_control/msg" TYPE FILE FILES "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/corner.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rover_control/msg" TYPE FILE FILES
+    "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/corner.msg"
+    "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/rover.msg"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/gennodejs/ros/rover_control/msg/corner.js"
+  "/home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/gennodejs/ros/rover_control/msg/rover.js"
   "CMakeFiles/rover_control_generate_messages_nodejs"
 )
 

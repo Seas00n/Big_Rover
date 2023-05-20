@@ -36,6 +36,16 @@
     :reader steer_pos_desired
     :initarg :steer_pos_desired
     :type cl:float
+    :initform 0.0)
+   (steer_vel_actual
+    :reader steer_vel_actual
+    :initarg :steer_vel_actual
+    :type cl:float
+    :initform 0.0)
+   (steer_vel_desired
+    :reader steer_vel_desired
+    :initarg :steer_vel_desired
+    :type cl:float
     :initform 0.0))
 )
 
@@ -76,6 +86,16 @@
 (cl:defmethod steer_pos_desired-val ((m <corner>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader rover_control-msg:steer_pos_desired-val is deprecated.  Use rover_control-msg:steer_pos_desired instead.")
   (steer_pos_desired m))
+
+(cl:ensure-generic-function 'steer_vel_actual-val :lambda-list '(m))
+(cl:defmethod steer_vel_actual-val ((m <corner>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader rover_control-msg:steer_vel_actual-val is deprecated.  Use rover_control-msg:steer_vel_actual instead.")
+  (steer_vel_actual m))
+
+(cl:ensure-generic-function 'steer_vel_desired-val :lambda-list '(m))
+(cl:defmethod steer_vel_desired-val ((m <corner>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader rover_control-msg:steer_vel_desired-val is deprecated.  Use rover_control-msg:steer_vel_desired instead.")
+  (steer_vel_desired m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <corner>) ostream)
   "Serializes a message object of type '<corner>"
   (cl:let ((bits (roslisp-utils:encode-double-float-bits (cl:slot-value msg 'wheel_pos_actual))))
@@ -124,6 +144,24 @@
     (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream))
   (cl:let ((bits (roslisp-utils:encode-double-float-bits (cl:slot-value msg 'steer_pos_desired))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-double-float-bits (cl:slot-value msg 'steer_vel_actual))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-double-float-bits (cl:slot-value msg 'steer_vel_desired))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
@@ -195,6 +233,26 @@
       (cl:setf (cl:ldb (cl:byte 8 48) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 56) bits) (cl:read-byte istream))
     (cl:setf (cl:slot-value msg 'steer_pos_desired) (roslisp-utils:decode-double-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'steer_vel_actual) (roslisp-utils:decode-double-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'steer_vel_desired) (roslisp-utils:decode-double-float-bits bits)))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<corner>)))
@@ -205,18 +263,20 @@
   "rover_control/corner")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<corner>)))
   "Returns md5sum for a message object of type '<corner>"
-  "516e2e5c8624f5f3853fb88a0ab5fb10")
+  "f28300dc96da5592dc5c99f06bac2854")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'corner)))
   "Returns md5sum for a message object of type 'corner"
-  "516e2e5c8624f5f3853fb88a0ab5fb10")
+  "f28300dc96da5592dc5c99f06bac2854")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<corner>)))
   "Returns full string definition for message of type '<corner>"
-  (cl:format cl:nil "float64 wheel_pos_actual~%float64 wheel_pos_desired~%float64 wheel_vel_actual~%float64 wheel_vel_desired~%float64 steer_pos_actual~%float64 steer_pos_desired~%~%"))
+  (cl:format cl:nil "float64 wheel_pos_actual~%float64 wheel_pos_desired~%float64 wheel_vel_actual~%float64 wheel_vel_desired~%float64 steer_pos_actual~%float64 steer_pos_desired~%float64 steer_vel_actual~%float64 steer_vel_desired~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'corner)))
   "Returns full string definition for message of type 'corner"
-  (cl:format cl:nil "float64 wheel_pos_actual~%float64 wheel_pos_desired~%float64 wheel_vel_actual~%float64 wheel_vel_desired~%float64 steer_pos_actual~%float64 steer_pos_desired~%~%"))
+  (cl:format cl:nil "float64 wheel_pos_actual~%float64 wheel_pos_desired~%float64 wheel_vel_actual~%float64 wheel_vel_desired~%float64 steer_pos_actual~%float64 steer_pos_desired~%float64 steer_vel_actual~%float64 steer_vel_desired~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <corner>))
   (cl:+ 0
+     8
+     8
      8
      8
      8
@@ -233,4 +293,6 @@
     (cl:cons ':wheel_vel_desired (wheel_vel_desired msg))
     (cl:cons ':steer_pos_actual (steer_pos_actual msg))
     (cl:cons ':steer_pos_desired (steer_pos_desired msg))
+    (cl:cons ':steer_vel_actual (steer_vel_actual msg))
+    (cl:cons ':steer_vel_desired (steer_vel_desired msg))
 ))

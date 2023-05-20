@@ -29,7 +29,9 @@ struct corner_
     , wheel_vel_actual(0.0)
     , wheel_vel_desired(0.0)
     , steer_pos_actual(0.0)
-    , steer_pos_desired(0.0)  {
+    , steer_pos_desired(0.0)
+    , steer_vel_actual(0.0)
+    , steer_vel_desired(0.0)  {
     }
   corner_(const ContainerAllocator& _alloc)
     : wheel_pos_actual(0.0)
@@ -37,7 +39,9 @@ struct corner_
     , wheel_vel_actual(0.0)
     , wheel_vel_desired(0.0)
     , steer_pos_actual(0.0)
-    , steer_pos_desired(0.0)  {
+    , steer_pos_desired(0.0)
+    , steer_vel_actual(0.0)
+    , steer_vel_desired(0.0)  {
   (void)_alloc;
     }
 
@@ -60,6 +64,12 @@ struct corner_
 
    typedef double _steer_pos_desired_type;
   _steer_pos_desired_type steer_pos_desired;
+
+   typedef double _steer_vel_actual_type;
+  _steer_vel_actual_type steer_vel_actual;
+
+   typedef double _steer_vel_desired_type;
+  _steer_vel_desired_type steer_vel_desired;
 
 
 
@@ -95,7 +105,9 @@ bool operator==(const ::rover_control::corner_<ContainerAllocator1> & lhs, const
     lhs.wheel_vel_actual == rhs.wheel_vel_actual &&
     lhs.wheel_vel_desired == rhs.wheel_vel_desired &&
     lhs.steer_pos_actual == rhs.steer_pos_actual &&
-    lhs.steer_pos_desired == rhs.steer_pos_desired;
+    lhs.steer_pos_desired == rhs.steer_pos_desired &&
+    lhs.steer_vel_actual == rhs.steer_vel_actual &&
+    lhs.steer_vel_desired == rhs.steer_vel_desired;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -152,12 +164,12 @@ struct MD5Sum< ::rover_control::corner_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "516e2e5c8624f5f3853fb88a0ab5fb10";
+    return "f28300dc96da5592dc5c99f06bac2854";
   }
 
   static const char* value(const ::rover_control::corner_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x516e2e5c8624f5f3ULL;
-  static const uint64_t static_value2 = 0x853fb88a0ab5fb10ULL;
+  static const uint64_t static_value1 = 0xf28300dc96da5592ULL;
+  static const uint64_t static_value2 = 0xdc5c99f06bac2854ULL;
 };
 
 template<class ContainerAllocator>
@@ -182,6 +194,8 @@ struct Definition< ::rover_control::corner_<ContainerAllocator> >
 "float64 wheel_vel_desired\n"
 "float64 steer_pos_actual\n"
 "float64 steer_pos_desired\n"
+"float64 steer_vel_actual\n"
+"float64 steer_vel_desired\n"
 ;
   }
 
@@ -206,6 +220,8 @@ namespace serialization
       stream.next(m.wheel_vel_desired);
       stream.next(m.steer_pos_actual);
       stream.next(m.steer_pos_desired);
+      stream.next(m.steer_vel_actual);
+      stream.next(m.steer_vel_desired);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -236,6 +252,10 @@ struct Printer< ::rover_control::corner_<ContainerAllocator> >
     Printer<double>::stream(s, indent + "  ", v.steer_pos_actual);
     s << indent << "steer_pos_desired: ";
     Printer<double>::stream(s, indent + "  ", v.steer_pos_desired);
+    s << indent << "steer_vel_actual: ";
+    Printer<double>::stream(s, indent + "  ", v.steer_vel_actual);
+    s << indent << "steer_vel_desired: ";
+    Printer<double>::stream(s, indent + "  ", v.steer_vel_desired);
   }
 };
 

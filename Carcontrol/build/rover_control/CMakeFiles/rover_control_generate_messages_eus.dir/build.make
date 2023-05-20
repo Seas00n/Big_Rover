@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/yuxuan/Project/Big_Rover/Carcontrol/build
 include rover_control/CMakeFiles/rover_control_generate_messages_eus.dir/progress.make
 
 rover_control/CMakeFiles/rover_control_generate_messages_eus: /home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/roseus/ros/rover_control/msg/corner.l
+rover_control/CMakeFiles/rover_control_generate_messages_eus: /home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/roseus/ros/rover_control/msg/rover.l
 rover_control/CMakeFiles/rover_control_generate_messages_eus: /home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/roseus/ros/rover_control/manifest.l
 
 
@@ -62,12 +63,18 @@ rover_control/CMakeFiles/rover_control_generate_messages_eus: /home/yuxuan/Proje
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yuxuan/Project/Big_Rover/Carcontrol/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from rover_control/corner.msg"
 	cd /home/yuxuan/Project/Big_Rover/Carcontrol/build/rover_control && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/corner.msg -Irover_control:/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p rover_control -o /home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/roseus/ros/rover_control/msg
 
+/home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/roseus/ros/rover_control/msg/rover.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/roseus/ros/rover_control/msg/rover.l: /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/rover.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yuxuan/Project/Big_Rover/Carcontrol/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from rover_control/rover.msg"
+	cd /home/yuxuan/Project/Big_Rover/Carcontrol/build/rover_control && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/rover.msg -Irover_control:/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p rover_control -o /home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/roseus/ros/rover_control/msg
+
 /home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/roseus/ros/rover_control/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yuxuan/Project/Big_Rover/Carcontrol/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for rover_control"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yuxuan/Project/Big_Rover/Carcontrol/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for rover_control"
 	cd /home/yuxuan/Project/Big_Rover/Carcontrol/build/rover_control && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/roseus/ros/rover_control rover_control std_msgs
 
 rover_control_generate_messages_eus: rover_control/CMakeFiles/rover_control_generate_messages_eus
 rover_control_generate_messages_eus: /home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/roseus/ros/rover_control/msg/corner.l
+rover_control_generate_messages_eus: /home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/roseus/ros/rover_control/msg/rover.l
 rover_control_generate_messages_eus: /home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/roseus/ros/rover_control/manifest.l
 rover_control_generate_messages_eus: rover_control/CMakeFiles/rover_control_generate_messages_eus.dir/build.make
 

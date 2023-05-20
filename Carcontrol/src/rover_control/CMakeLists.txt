@@ -13,7 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   message_generation
   turtlesim
-
+  geometry_msgs
 )
 find_package(Boost REQUIRED COMPONENTS
   system
@@ -61,6 +61,7 @@ find_package(Boost REQUIRED COMPONENTS
 add_message_files(
   FILES
   corner.msg
+  rover.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -228,5 +229,14 @@ target_link_libraries(rover_control
 catkin_install_python(PROGRAMS
   scripts/joy_listener.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+add_executable(spawn_turtle src/multi_turtle.cpp)
+target_link_libraries(spawn_turtle
+  ${catkin_LIBRARIES}
+  )
+
+add_executable(test_listener src/test_listener.cpp)
+target_link_libraries(test_listener
+${catkin_LIBRARIES}
 )
 SET(CMAKE_BUILD_TYPE "RelWithDebInfo")

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/common-lisp/ros/rover_control/msg/corner.lisp"
+  "/home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/common-lisp/ros/rover_control/msg/rover.lisp"
   "CMakeFiles/rover_control_generate_messages_lisp"
 )
 

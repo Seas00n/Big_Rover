@@ -3,5 +3,7 @@
   (:export
    "<CORNER>"
    "CORNER"
+   "<ROVER>"
+   "ROVER"
   ))
 

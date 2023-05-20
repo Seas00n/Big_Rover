@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/yuxuan/Project/Big_Rover/Carcontrol/build
 include rover_control/CMakeFiles/rover_control_generate_messages_nodejs.dir/progress.make
 
 rover_control/CMakeFiles/rover_control_generate_messages_nodejs: /home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/gennodejs/ros/rover_control/msg/corner.js
+rover_control/CMakeFiles/rover_control_generate_messages_nodejs: /home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/gennodejs/ros/rover_control/msg/rover.js
 
 
 /home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/gennodejs/ros/rover_control/msg/corner.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
@@ -61,8 +62,14 @@ rover_control/CMakeFiles/rover_control_generate_messages_nodejs: /home/yuxuan/Pr
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yuxuan/Project/Big_Rover/Carcontrol/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from rover_control/corner.msg"
 	cd /home/yuxuan/Project/Big_Rover/Carcontrol/build/rover_control && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/corner.msg -Irover_control:/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p rover_control -o /home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/gennodejs/ros/rover_control/msg
 
+/home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/gennodejs/ros/rover_control/msg/rover.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/gennodejs/ros/rover_control/msg/rover.js: /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/rover.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yuxuan/Project/Big_Rover/Carcontrol/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from rover_control/rover.msg"
+	cd /home/yuxuan/Project/Big_Rover/Carcontrol/build/rover_control && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/rover.msg -Irover_control:/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p rover_control -o /home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/gennodejs/ros/rover_control/msg
+
 rover_control_generate_messages_nodejs: rover_control/CMakeFiles/rover_control_generate_messages_nodejs
 rover_control_generate_messages_nodejs: /home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/gennodejs/ros/rover_control/msg/corner.js
+rover_control_generate_messages_nodejs: /home/yuxuan/Project/Big_Rover/Carcontrol/devel/share/gennodejs/ros/rover_control/msg/rover.js
 rover_control_generate_messages_nodejs: rover_control/CMakeFiles/rover_control_generate_messages_nodejs.dir/build.make
 
 .PHONY : rover_control_generate_messages_nodejs

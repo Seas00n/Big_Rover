@@ -9,12 +9,16 @@ rover_control/CMakeFiles/rover_control.dir/src/main_draft.cpp.o: /home/yuxuan/Do
 rover_control/CMakeFiles/rover_control.dir/src/main_draft.cpp.o: /home/yuxuan/Downloads/encoder_motor_steering/DynamixelSDK/include/dynamixel_sdk/packet_handler.h
 rover_control/CMakeFiles/rover_control.dir/src/main_draft.cpp.o: /home/yuxuan/Downloads/encoder_motor_steering/DynamixelSDK/include/dynamixel_sdk/port_handler.h
 rover_control/CMakeFiles/rover_control.dir/src/main_draft.cpp.o: /home/yuxuan/Project/Big_Rover/Carcontrol/devel/include/rover_control/corner.h
+rover_control/CMakeFiles/rover_control.dir/src/main_draft.cpp.o: /home/yuxuan/Project/Big_Rover/Carcontrol/devel/include/rover_control/rover.h
+rover_control/CMakeFiles/rover_control.dir/src/main_draft.cpp.o: /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/src/damp_.hpp
 rover_control/CMakeFiles/rover_control.dir/src/main_draft.cpp.o: /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/src/main_draft.cpp
 rover_control/CMakeFiles/rover_control.dir/src/main_draft.cpp.o: /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/src/msg_.hpp
 rover_control/CMakeFiles/rover_control.dir/src/main_draft.cpp.o: /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/src/spine/dynamixel_motor.h
 rover_control/CMakeFiles/rover_control.dir/src/main_draft.cpp.o: /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/src/spine/minicheetah_motor.h
 rover_control/CMakeFiles/rover_control.dir/src/main_draft.cpp.o: /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/src/spine/motor.h
 rover_control/CMakeFiles/rover_control.dir/src/main_draft.cpp.o: /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/src/spine/socketcan.h
+rover_control/CMakeFiles/rover_control.dir/src/main_draft.cpp.o: /opt/ros/noetic/include/geometry_msgs/Twist.h
+rover_control/CMakeFiles/rover_control.dir/src/main_draft.cpp.o: /opt/ros/noetic/include/geometry_msgs/Vector3.h
 rover_control/CMakeFiles/rover_control.dir/src/main_draft.cpp.o: /opt/ros/noetic/include/ros/advertise_options.h
 rover_control/CMakeFiles/rover_control.dir/src/main_draft.cpp.o: /opt/ros/noetic/include/ros/advertise_service_options.h
 rover_control/CMakeFiles/rover_control.dir/src/main_draft.cpp.o: /opt/ros/noetic/include/ros/assert.h

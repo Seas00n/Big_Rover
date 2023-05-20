@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/home/yuxuan/Project/Big_Rover/Carcontrol/devel/include/rover_control/corner.h"
+  "/home/yuxuan/Project/Big_Rover/Carcontrol/devel/include/rover_control/rover.h"
   "CMakeFiles/rover_control_generate_messages_cpp"
 )
 

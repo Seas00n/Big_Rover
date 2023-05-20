@@ -14,7 +14,7 @@
 
 (defclass rover_control::corner
   :super ros::object
-  :slots (_wheel_pos_actual _wheel_pos_desired _wheel_vel_actual _wheel_vel_desired _steer_pos_actual _steer_pos_desired ))
+  :slots (_wheel_pos_actual _wheel_pos_desired _wheel_vel_actual _wheel_vel_desired _steer_pos_actual _steer_pos_desired _steer_vel_actual _steer_vel_desired ))
 
 (defmethod rover_control::corner
   (:init
@@ -25,6 +25,8 @@
     ((:wheel_vel_desired __wheel_vel_desired) 0.0)
     ((:steer_pos_actual __steer_pos_actual) 0.0)
     ((:steer_pos_desired __steer_pos_desired) 0.0)
+    ((:steer_vel_actual __steer_vel_actual) 0.0)
+    ((:steer_vel_desired __steer_vel_desired) 0.0)
     )
    (send-super :init)
    (setq _wheel_pos_actual (float __wheel_pos_actual))
@@ -33,6 +35,8 @@
    (setq _wheel_vel_desired (float __wheel_vel_desired))
    (setq _steer_pos_actual (float __steer_pos_actual))
    (setq _steer_pos_desired (float __steer_pos_desired))
+   (setq _steer_vel_actual (float __steer_vel_actual))
+   (setq _steer_vel_desired (float __steer_vel_desired))
    self)
   (:wheel_pos_actual
    (&optional __wheel_pos_actual)
@@ -52,6 +56,12 @@
   (:steer_pos_desired
    (&optional __steer_pos_desired)
    (if __steer_pos_desired (setq _steer_pos_desired __steer_pos_desired)) _steer_pos_desired)
+  (:steer_vel_actual
+   (&optional __steer_vel_actual)
+   (if __steer_vel_actual (setq _steer_vel_actual __steer_vel_actual)) _steer_vel_actual)
+  (:steer_vel_desired
+   (&optional __steer_vel_desired)
+   (if __steer_vel_desired (setq _steer_vel_desired __steer_vel_desired)) _steer_vel_desired)
   (:serialization-length
    ()
    (+
@@ -66,6 +76,10 @@
     ;; float64 _steer_pos_actual
     8
     ;; float64 _steer_pos_desired
+    8
+    ;; float64 _steer_vel_actual
+    8
+    ;; float64 _steer_vel_desired
     8
     ))
   (:serialize
@@ -84,6 +98,10 @@
        (sys::poke _steer_pos_actual (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
      ;; float64 _steer_pos_desired
        (sys::poke _steer_pos_desired (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
+     ;; float64 _steer_vel_actual
+       (sys::poke _steer_vel_actual (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
+     ;; float64 _steer_vel_desired
+       (sys::poke _steer_vel_desired (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
@@ -100,11 +118,15 @@
      (setq _steer_pos_actual (sys::peek buf ptr- :double)) (incf ptr- 8)
    ;; float64 _steer_pos_desired
      (setq _steer_pos_desired (sys::peek buf ptr- :double)) (incf ptr- 8)
+   ;; float64 _steer_vel_actual
+     (setq _steer_vel_actual (sys::peek buf ptr- :double)) (incf ptr- 8)
+   ;; float64 _steer_vel_desired
+     (setq _steer_vel_desired (sys::peek buf ptr- :double)) (incf ptr- 8)
    ;;
    self)
   )
 
-(setf (get rover_control::corner :md5sum-) "516e2e5c8624f5f3853fb88a0ab5fb10")
+(setf (get rover_control::corner :md5sum-) "f28300dc96da5592dc5c99f06bac2854")
 (setf (get rover_control::corner :datatype-) "rover_control/corner")
 (setf (get rover_control::corner :definition-)
       "float64 wheel_pos_actual
@@ -113,10 +135,12 @@ float64 wheel_vel_actual
 float64 wheel_vel_desired
 float64 steer_pos_actual
 float64 steer_pos_desired
+float64 steer_vel_actual
+float64 steer_vel_desired
 ")
 
 
 
-(provide :rover_control/corner "516e2e5c8624f5f3853fb88a0ab5fb10")
+(provide :rover_control/corner "f28300dc96da5592dc5c99f06bac2854")
 
 

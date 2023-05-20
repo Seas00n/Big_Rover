@@ -24,6 +24,8 @@ class corner {
       this.wheel_vel_desired = null;
       this.steer_pos_actual = null;
       this.steer_pos_desired = null;
+      this.steer_vel_actual = null;
+      this.steer_vel_desired = null;
     }
     else {
       if (initObj.hasOwnProperty('wheel_pos_actual')) {
@@ -62,6 +64,18 @@ class corner {
       else {
         this.steer_pos_desired = 0.0;
       }
+      if (initObj.hasOwnProperty('steer_vel_actual')) {
+        this.steer_vel_actual = initObj.steer_vel_actual
+      }
+      else {
+        this.steer_vel_actual = 0.0;
+      }
+      if (initObj.hasOwnProperty('steer_vel_desired')) {
+        this.steer_vel_desired = initObj.steer_vel_desired
+      }
+      else {
+        this.steer_vel_desired = 0.0;
+      }
     }
   }
 
@@ -79,6 +93,10 @@ class corner {
     bufferOffset = _serializer.float64(obj.steer_pos_actual, buffer, bufferOffset);
     // Serialize message field [steer_pos_desired]
     bufferOffset = _serializer.float64(obj.steer_pos_desired, buffer, bufferOffset);
+    // Serialize message field [steer_vel_actual]
+    bufferOffset = _serializer.float64(obj.steer_vel_actual, buffer, bufferOffset);
+    // Serialize message field [steer_vel_desired]
+    bufferOffset = _serializer.float64(obj.steer_vel_desired, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -98,11 +116,15 @@ class corner {
     data.steer_pos_actual = _deserializer.float64(buffer, bufferOffset);
     // Deserialize message field [steer_pos_desired]
     data.steer_pos_desired = _deserializer.float64(buffer, bufferOffset);
+    // Deserialize message field [steer_vel_actual]
+    data.steer_vel_actual = _deserializer.float64(buffer, bufferOffset);
+    // Deserialize message field [steer_vel_desired]
+    data.steer_vel_desired = _deserializer.float64(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 48;
+    return 64;
   }
 
   static datatype() {
@@ -112,7 +134,7 @@ class corner {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '516e2e5c8624f5f3853fb88a0ab5fb10';
+    return 'f28300dc96da5592dc5c99f06bac2854';
   }
 
   static messageDefinition() {
@@ -124,6 +146,8 @@ class corner {
     float64 wheel_vel_desired
     float64 steer_pos_actual
     float64 steer_pos_desired
+    float64 steer_vel_actual
+    float64 steer_vel_desired
     `;
   }
 
@@ -173,6 +197,20 @@ class corner {
     }
     else {
       resolved.steer_pos_desired = 0.0
+    }
+
+    if (msg.steer_vel_actual !== undefined) {
+      resolved.steer_vel_actual = msg.steer_vel_actual;
+    }
+    else {
+      resolved.steer_vel_actual = 0.0
+    }
+
+    if (msg.steer_vel_desired !== undefined) {
+      resolved.steer_vel_desired = msg.steer_vel_desired;
+    }
+    else {
+      resolved.steer_vel_desired = 0.0
     }
 
     return resolved;

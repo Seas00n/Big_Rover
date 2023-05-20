@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/corner.msg"
+messages_str = "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/corner.msg;/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/rover.msg"
 services_str = ""
 pkg_name = "rover_control"
 dependencies_str = "std_msgs"

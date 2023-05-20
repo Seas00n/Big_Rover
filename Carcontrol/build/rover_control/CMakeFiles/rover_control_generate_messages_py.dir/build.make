@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/yuxuan/Project/Big_Rover/Carcontrol/build
 include rover_control/CMakeFiles/rover_control_generate_messages_py.dir/progress.make
 
 rover_control/CMakeFiles/rover_control_generate_messages_py: /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/python3/dist-packages/rover_control/msg/_corner.py
+rover_control/CMakeFiles/rover_control_generate_messages_py: /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/python3/dist-packages/rover_control/msg/_rover.py
 rover_control/CMakeFiles/rover_control_generate_messages_py: /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/python3/dist-packages/rover_control/msg/__init__.py
 
 
@@ -62,13 +63,20 @@ rover_control/CMakeFiles/rover_control_generate_messages_py: /home/yuxuan/Projec
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yuxuan/Project/Big_Rover/Carcontrol/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG rover_control/corner"
 	cd /home/yuxuan/Project/Big_Rover/Carcontrol/build/rover_control && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/corner.msg -Irover_control:/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p rover_control -o /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/python3/dist-packages/rover_control/msg
 
+/home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/python3/dist-packages/rover_control/msg/_rover.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/python3/dist-packages/rover_control/msg/_rover.py: /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/rover.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yuxuan/Project/Big_Rover/Carcontrol/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG rover_control/rover"
+	cd /home/yuxuan/Project/Big_Rover/Carcontrol/build/rover_control && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/rover.msg -Irover_control:/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p rover_control -o /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/python3/dist-packages/rover_control/msg
+
 /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/python3/dist-packages/rover_control/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/python3/dist-packages/rover_control/msg/__init__.py: /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/python3/dist-packages/rover_control/msg/_corner.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yuxuan/Project/Big_Rover/Carcontrol/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for rover_control"
+/home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/python3/dist-packages/rover_control/msg/__init__.py: /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/python3/dist-packages/rover_control/msg/_rover.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yuxuan/Project/Big_Rover/Carcontrol/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for rover_control"
 	cd /home/yuxuan/Project/Big_Rover/Carcontrol/build/rover_control && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/python3/dist-packages/rover_control/msg --initpy
 
 rover_control_generate_messages_py: rover_control/CMakeFiles/rover_control_generate_messages_py
 rover_control_generate_messages_py: /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/python3/dist-packages/rover_control/msg/_corner.py
+rover_control_generate_messages_py: /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/python3/dist-packages/rover_control/msg/_rover.py
 rover_control_generate_messages_py: /home/yuxuan/Project/Big_Rover/Carcontrol/devel/lib/python3/dist-packages/rover_control/msg/__init__.py
 rover_control_generate_messages_py: rover_control/CMakeFiles/rover_control_generate_messages_py.dir/build.make
 

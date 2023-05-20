@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "rover_control: 1 messages, 0 services")
+message(STATUS "rover_control: 2 messages, 0 services")
 
 set(MSG_I_FLAGS "-Irover_control:/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
@@ -22,6 +22,11 @@ add_custom_target(_rover_control_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rover_control" "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/corner.msg" ""
 )
 
+get_filename_component(_filename "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/rover.msg" NAME_WE)
+add_custom_target(_rover_control_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rover_control" "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/rover.msg" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -30,6 +35,12 @@ add_custom_target(_rover_control_generate_messages_check_deps_${_filename}
 ### Generating Messages
 _generate_msg_cpp(rover_control
   "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/corner.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rover_control
+)
+_generate_msg_cpp(rover_control
+  "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/rover.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rover_control
@@ -51,6 +62,8 @@ add_dependencies(rover_control_generate_messages rover_control_generate_messages
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/corner.msg" NAME_WE)
 add_dependencies(rover_control_generate_messages_cpp _rover_control_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/rover.msg" NAME_WE)
+add_dependencies(rover_control_generate_messages_cpp _rover_control_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(rover_control_gencpp)
@@ -63,6 +76,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rover_control_generate_messages_cpp
 ### Generating Messages
 _generate_msg_eus(rover_control
   "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/corner.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rover_control
+)
+_generate_msg_eus(rover_control
+  "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/rover.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rover_control
@@ -84,6 +103,8 @@ add_dependencies(rover_control_generate_messages rover_control_generate_messages
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/corner.msg" NAME_WE)
 add_dependencies(rover_control_generate_messages_eus _rover_control_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/rover.msg" NAME_WE)
+add_dependencies(rover_control_generate_messages_eus _rover_control_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(rover_control_geneus)
@@ -96,6 +117,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rover_control_generate_messages_eus
 ### Generating Messages
 _generate_msg_lisp(rover_control
   "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/corner.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rover_control
+)
+_generate_msg_lisp(rover_control
+  "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/rover.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rover_control
@@ -117,6 +144,8 @@ add_dependencies(rover_control_generate_messages rover_control_generate_messages
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/corner.msg" NAME_WE)
 add_dependencies(rover_control_generate_messages_lisp _rover_control_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/rover.msg" NAME_WE)
+add_dependencies(rover_control_generate_messages_lisp _rover_control_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(rover_control_genlisp)
@@ -129,6 +158,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rover_control_generate_messages_lis
 ### Generating Messages
 _generate_msg_nodejs(rover_control
   "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/corner.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rover_control
+)
+_generate_msg_nodejs(rover_control
+  "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/rover.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rover_control
@@ -150,6 +185,8 @@ add_dependencies(rover_control_generate_messages rover_control_generate_messages
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/corner.msg" NAME_WE)
 add_dependencies(rover_control_generate_messages_nodejs _rover_control_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/rover.msg" NAME_WE)
+add_dependencies(rover_control_generate_messages_nodejs _rover_control_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(rover_control_gennodejs)
@@ -162,6 +199,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rover_control_generate_messages_nod
 ### Generating Messages
 _generate_msg_py(rover_control
   "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/corner.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rover_control
+)
+_generate_msg_py(rover_control
+  "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/rover.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rover_control
@@ -182,6 +225,8 @@ add_dependencies(rover_control_generate_messages rover_control_generate_messages
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/corner.msg" NAME_WE)
+add_dependencies(rover_control_generate_messages_py _rover_control_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/yuxuan/Project/Big_Rover/Carcontrol/src/rover_control/msg/rover.msg" NAME_WE)
 add_dependencies(rover_control_generate_messages_py _rover_control_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
