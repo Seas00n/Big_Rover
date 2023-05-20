@@ -93,59 +93,58 @@ void cmdTxThread(std::vector<AK10_9Motor> wheel_Motor,
 
 void FSMControl(const rover_control::rover::ConstPtr& p, RoverTypeDef& rover_temp,
                 std::vector<SteeringWheelTypeDef>& actuators){
-  std::cout<<"rover_temp in callback"<<&(rover_temp)<<std::endl;
   volatile int current_state = rover_temp.rover_motion_state;
-  std::cout<<"current state:"<<current_state<<std::endl;
+  // std::cout<<"current state:"<<current_state<<std::endl;
   if(current_state==0){
-    std::cout<<"State GO_AHEAD";
+    // std::cout<<"State GO_AHEAD";
     rover_temp.rover_v= p->rover_vx;
     rover_temp.rover_w = 0;
     for(int i=0;i<4;i++){
       actuators[i].wheel_v_desired = rover_temp.rover_v;
       actuators[i].steer_p_desired = 0;
     }
-    std::cout<<rover_temp.rover_v<<std::endl;
+    // std::cout<<rover_temp.rover_v<<std::endl;
     if((abs(p->rover_w)<0.01)&&abs(p->rover_vx<0.01)&&(p->rover_state==CHANGE_TO_TURN)){
       rover_temp.rover_motion_state = CHANGE_TO_TURN;
-      std::cout<<"CHANGE next state"<<rover_temp.rover_motion_state<<std::endl;
+      // std::cout<<"CHANGE next state"<<rover_temp.rover_motion_state<<std::endl;
     }
     return;
   }
   if (current_state ==1){
-    std::cout<<"State Change to Turn"<<std::endl;
+    // std::cout<<"State Change to Turn"<<std::endl;
     rover_temp.rover_v = 0;
     rover_temp.rover_w = 0;
-    actuators[0].steer_p_desired = 45.0*PI/180.0;
+    actuators[0].steer_p_desired = -135.0*PI/180.0;
     actuators[1].steer_p_desired = -45.0*PI/180.0;
-    actuators[2].steer_p_desired = -45.0*PI/180.0;
+    actuators[2].steer_p_desired = 135.0*PI/180.0;
     actuators[3].steer_p_desired = 45.0*PI/180.0;
     if(p->rover_state==TURN){
       rover_temp.rover_motion_state = TURN;
-      std::cout<<"CHANGE next state"<<rover_temp.rover_motion_state<<std::endl;
+      // std::cout<<"CHANGE next state"<<rover_temp.rover_motion_state<<std::endl;
     }
     return;
   }
   if(current_state == 2){
-    std::cout<<"State Turn"<<p->rover_w<<std::endl;
+    // std::cout<<"State Turn"<<p->rover_w<<std::endl;
     rover_temp.rover_v = 0;
     rover_temp.rover_w = p->rover_w;
     double wheel_turn = rover_temp.rover_w*wheel_to_center;
     for(int i=0;i<4;i++){
       actuators[i].wheel_v_desired = wheel_turn;
     }
-    std::cout<<rover_temp.rover_w<<std::endl;
-    actuators[0].steer_p_desired = 45.0*PI/180.0;
+    // std::cout<<rover_temp.rover_w<<std::endl;
+    actuators[0].steer_p_desired = -135.0*PI/180.0;
     actuators[1].steer_p_desired = -45.0*PI/180.0;
-    actuators[2].steer_p_desired = -45.0*PI/180.0;
+    actuators[2].steer_p_desired = 135.0*PI/180.0;
     actuators[3].steer_p_desired = 45.0*PI/180.0;
     if(abs(p->rover_w)<0.01&&abs(p->rover_vx)<0.01&&p->rover_state==CHANGE_TO_GO){
       rover_temp.rover_motion_state = CHANGE_TO_GO;
-      std::cout<<"CHANGE next state"<<rover_temp.rover_motion_state<<std::endl;
+      // std::cout<<"CHANGE next state"<<rover_temp.rover_motion_state<<std::endl;
     }
     return;
   }
   if(current_state == 3){
-    std::cout<<"State Change to GO"<<std::endl;
+    // std::cout<<"State Change to GO"<<std::endl;
     rover_temp.rover_v = 0;
     rover_temp.rover_w = 0;
     for(int i=0;i<4;i++){
@@ -153,7 +152,7 @@ void FSMControl(const rover_control::rover::ConstPtr& p, RoverTypeDef& rover_tem
     }
     if(p->rover_state==GO_AHEAD){
       rover_temp.rover_motion_state = GO_AHEAD;
-      std::cout<<"CHANGE next state"<<rover_temp.rover_motion_state<<std::endl;
+      // std::cout<<"CHANGE next state"<<rover_temp.rover_motion_state<<std::endl;
     }
     return;
   }
@@ -202,8 +201,8 @@ int main(int argc, char *argv[]){
   SoftwareInitialization(actuators,nh);
 
   //订阅手柄发布的无人车状态消息
-  std::cout<<"rover_temp in main:"<<&(rover_temp)<<std::endl;
-  ros::Subscriber sub = nh.subscribe<rover_control::rover>("rover_state",1000,boost::bind(&FSMControl,_1,rover_temp,actuators));
+  ros::Subscriber sub = nh.subscribe<rover_control::rover>("rover_state",1000,boost::bind(&FSMControl,_1,
+                                                            boost::ref(rover_temp),boost::ref(actuators)));
 
 
 

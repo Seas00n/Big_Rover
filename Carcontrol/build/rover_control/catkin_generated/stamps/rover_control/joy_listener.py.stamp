@@ -8,8 +8,8 @@ from enum import Enum
 
 
 
-f = 2
-z = 2
+f = 8
+z = 1.2
 r = 0.0
 k1 = z/math.pi/f
 k2 = 1/((2*math.pi*f)*(2*math.pi*f))

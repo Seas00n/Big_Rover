@@ -6,7 +6,7 @@ class SecondOrderDynamics{
         double k1,k2,k3;
         double dt;
     public:
-        SecondOrderDynamics(float f,float z,float r,double x0,double dt){
+        SecondOrderDynamics(double f,double z,double r,double x0,double dt){
             double pi = 3.141592657;
             this->k1 = z/pi/f;
             this->k2 = 1/((2*pi*f)*(2*pi*f));
