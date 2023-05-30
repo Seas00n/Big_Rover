@@ -47,7 +47,7 @@ def callback(data):
     else:
         car_vnew = -math.sqrt(axes1*axes1+axes2*axes2)*4
     
-    car_wnew = axes3*5
+    car_wnew = axes3*2
 
     if abs(data.buttons[3]-1)<0.001 and car_statenew == 3: #Y pressed
         car_statenew = State["GO_AHEAD"]

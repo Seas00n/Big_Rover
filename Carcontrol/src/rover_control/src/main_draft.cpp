@@ -52,44 +52,7 @@ void cmdTxThread(std::vector<AK10_9Motor> wheel_Motor,
       }
     }
 }
-// void BicycleControl(const rover_control::rover::ConstPtr& p){
-//   double dt = 0.01;
-//   rover_temp.rover_v = p->rover_vx;
-//   rover_temp.rover_w = p->rover_w;
-//   std::cout<<rover_temp.rover_v<<std::endl;
-//   if(abs(rover_temp.rover_v)>0.01&&abs(rover_temp.rover_w)>0.01){
-//     wheels[3].vel_desired = rover_temp.rover_v;
-//     wheels[4].vel_desired = rover_temp.rover_v;
-//     double steer_angle = atan2(rover_temp.rover_w*2*wheel_to_center_y/abs(rover_temp.rover_v),1.0);
-//     double turn_radius = 2*wheel_to_center_y/(tan(steer_angle));
-//     steers[0].pos_desired = steer_angle;
-//     steers[1].pos_desired = steer_angle;
-//     steers[2].pos_desired = 0;
-//     steers[3].pos_desired = 0;
-//     wheels[0].vel_desired = rover_temp.rover_v/turn_radius*cal_distance(turn_radius,2*wheel_to_center_y);
-//     wheels[1].vel_desired = wheels[0].vel_desired;
-//   }else{
-//     for(int i=0;i<4;i++){
-//       wheels[i].vel_desired = 0;
-//     }
-//   }
-// }
 
-// void AckermanControl(const turtlesim::Pose::ConstPtr& p){
-//   rover_temp.rover_v = p->linear_velocity;
-//   rover_temp.rover_w = p->angular_velocity;
-//   wheels[3].vel_desired = rover_temp.rover_v;
-//   wheels[4].vel_desired = rover_temp.rover_v;
-//   double steer_angle = atan2(rover_temp.rover_w*2*wheel_to_center_y/rover_temp.rover_v,1.0);
-//   double turn_radius = 2*wheel_to_center_y/(tan(steer_angle));
-//   steers[0].pos_desired = atan2(2*wheel_to_center_y,turn_radius+wheel_to_center_x);
-//   steers[1].pos_desired = atan2(2*wheel_to_center_y,turn_radius-wheel_to_center_x);
-//   steers[2].pos_desired = 0;
-//   steers[3].pos_desired = 0;
-
-//   wheels[0].vel_desired = rover_temp.rover_v/turn_radius*cal_distance(turn_radius+wheel_to_center_x,2*wheel_to_center_y);
-//   wheels[1].vel_desired = rover_temp.rover_v/turn_radius*cal_distance(turn_radius-wheel_to_center_x,2*wheel_to_center_y);
-// }
 
 void FSMControl(const rover_control::rover::ConstPtr& p, RoverTypeDef& rover_temp,
                 std::vector<SteeringWheelTypeDef>& actuators){
