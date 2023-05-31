@@ -1,5 +1,0 @@
-<launch>
-    <node pkg = "turtlesim" type = "turtlesim_node" name="show_turtle"/>
-    <node pkg = "joy" type="joy_node" name="open_joy"/>
-    <node pkg = "rover_control" type="joy_listener.py" name="joy_control"/>
-</launch>

@@ -1,8 +1,0 @@
-float64 wheel_pos_actual
-float64 wheel_pos_desired
-float64 wheel_vel_actual
-float64 wheel_vel_desired
-float64 steer_pos_actual
-float64 steer_pos_desired
-float64 steer_vel_actual
-float64 steer_vel_desired

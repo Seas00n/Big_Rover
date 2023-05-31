@@ -23,6 +23,8 @@ geometry_msgs/TransformStamped.h
 /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/april_tag_pose/src/geometry_msgs/TransformStamped.h
 tf2/LinearMath/Quaternion.h
 /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/april_tag_pose/src/tf2/LinearMath/Quaternion.h
+ros/ros.h
+-
 
 /home/yuxuan/visp-ros/src/visp_ros/include/visp_ros/vpROSGrabber.h
 visp3/core/vpConfig.h

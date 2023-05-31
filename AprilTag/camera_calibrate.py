@@ -12,8 +12,8 @@ camRgb.setColorOrder(dai.ColorCameraProperties.ColorOrder.RGB)
 
 camRgb.preview.link(xoutRgb.input)
 
-img_calibrate_path = 'img/calibrate/'
-num_of_cal = 20
+img_calibrate_path = '/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/calibration/src/'
+num_of_cal = 50
 num_img = 0
 with dai.Device(pipeline) as device:
     print('Connected cameras:', device.getConnectedCameraFeatures())
@@ -26,7 +26,10 @@ with dai.Device(pipeline) as device:
         key = cv2.waitKey(1)
         if key == ord('t'):
             if num_img < num_of_cal:
-                cv2.imwrite(img_calibrate_path+"cal_{}.png".format(num_img), img)
+                if num_img<10:
+                    cv2.imwrite(img_calibrate_path + "chessboard-0{}.jpg".format(num_img), img)
+                else:
+                    cv2.imwrite(img_calibrate_path+"chessboard-{}.jpg".format(num_img), img)
                 print("Calibrate {}".format(num_img))
                 num_img += 1
         elif key == ord('q'):

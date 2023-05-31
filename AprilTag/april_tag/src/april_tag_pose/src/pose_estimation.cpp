@@ -8,13 +8,15 @@
 #include "tf2_ros/transform_broadcaster.h"
 #include "geometry_msgs/TransformStamped.h"
 #include "tf2/LinearMath/Quaternion.h"
+#include <ros/ros.h>
 
 
-int main(int argc, const char** argv){
+int main(int argc, char** argv){
+    ros::init(argc,argv,"pose_estimation");
     vpDetectorAprilTag::vpAprilTagFamily tagFamily = vpDetectorAprilTag::TAG_36h11;
-    vpDetectorAprilTag::vpPoseEstimationMethod poseEstimationMethod = vpDetectorAprilTag::HOMOGRAPHY_VIRTUAL_VS;
-    double tagSize = 0.077;
-    float quad_decimate = 0.1;
+    vpDetectorAprilTag::vpPoseEstimationMethod poseEstimationMethod = vpDetectorAprilTag::HOMOGRAPHY_ORTHOGONAL_ITERATION;
+    double tagSize = 0.077;//0.077
+    float quad_decimate = 0.2;
     std::string intrinsic_file = "/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/april_tag_pose/src/camera.xml";
     vpCameraParameters cam;
     cam.init();
@@ -63,7 +65,7 @@ int main(int argc, const char** argv){
         vpDetectorBase *detector = new vpDetectorAprilTag(tagFamily);
         dynamic_cast<vpDetectorAprilTag *>(detector)->setAprilTagQuadDecimate(quad_decimate);
         dynamic_cast<vpDetectorAprilTag *>(detector)->setAprilTagPoseEstimationMethod(poseEstimationMethod);
-        dynamic_cast<vpDetectorAprilTag *>(detector)->setAprilTagNbThreads(1);
+        dynamic_cast<vpDetectorAprilTag *>(detector)->setAprilTagNbThreads(2);
         dynamic_cast<vpDetectorAprilTag *>(detector)->setDisplayTag(true);
     
         std::vector<double> time_vec;
@@ -135,7 +137,7 @@ int main(int argc, const char** argv){
                 }
 
             }
-            std::cout<<"T"<<trans<<std::endl;
+            std::cout<<"T"<<sqrt(trans[0]*trans[0]+trans[1]*trans[1]+trans[2]*trans[2])<<std::endl;
             std::cout<<"Angle"<<eular_angle<<std::endl;
             vpDisplay::flush(I);
             if(vpDisplay::getClick(I,false)){
