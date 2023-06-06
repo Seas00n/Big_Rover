@@ -5,6 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python: IMU",
+            "type": "python",
+            "request": "launch",
+            "program": "/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/april_tag_pose/scripts/imu_.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
             "name": "ROS: Launch",
             "request": "launch",
             "target": "/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/april_tag_pose/launch/pose_estimation.launch",

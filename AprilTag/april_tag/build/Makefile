@@ -688,19 +688,6 @@ actionlib_msgs_generate_messages_eus/fast:
 .PHONY : actionlib_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named test_pose
-
-# Build rule for target.
-test_pose: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_pose
-.PHONY : test_pose
-
-# fast build rule for target.
-test_pose/fast:
-	$(MAKE) -f april_tag_pose/CMakeFiles/test_pose.dir/build.make april_tag_pose/CMakeFiles/test_pose.dir/build
-.PHONY : test_pose/fast
-
-#=============================================================================
 # Target rules for targets named tf2_msgs_generate_messages_lisp
 
 # Build rule for target.
@@ -725,19 +712,6 @@ geometry_msgs_generate_messages_nodejs: cmake_check_build_system
 geometry_msgs_generate_messages_nodejs/fast:
 	$(MAKE) -f april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named test_camera
-
-# Build rule for target.
-test_camera: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_camera
-.PHONY : test_camera
-
-# fast build rule for target.
-test_camera/fast:
-	$(MAKE) -f april_tag_pose/CMakeFiles/test_camera.dir/build.make april_tag_pose/CMakeFiles/test_camera.dir/build
-.PHONY : test_camera/fast
 
 #=============================================================================
 # Target rules for targets named bond_generate_messages_cpp
@@ -1182,10 +1156,8 @@ help:
 	@echo "... tf_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_eus"
-	@echo "... test_pose"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... test_camera"
 	@echo "... bond_generate_messages_cpp"
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"

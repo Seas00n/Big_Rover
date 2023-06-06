@@ -17,6 +17,7 @@ find_package(depthai CONFIG REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(VISP REQUIRED)
 find_package(visp_ros REQUIRED)
+find_package(Eigen3 REQUIRED)
 message("cmake_module_path: " ${CMAKE_MODULE_PATH})
 catkin_package(
 #  INCLUDE_DIRS include
@@ -31,21 +32,7 @@ include_directories(
   ${OpenCV_INCLUDE_DIRS}
   ${VISP_INCLUDE_DIRS}
   ${visp_ros_INCLUDE_DIRS}
-)
-add_executable(test_camera src/test_camera.cpp)
-
-target_link_libraries(
-  test_camera PUBLIC 
-  depthai::opencv 
-  ${OpenCV_LIBS}
-  ${VISP_LIBRARIES}
-)
-
-add_executable(test_pose src/test_pose.cpp)
-
-target_link_libraries(
-  test_pose PUBLIC
-  ${VISP_LIBRARIES}
+  ${EIGEN3_INCLUDE_DIRS}
 )
 
 add_executable(pose_estimation src/pose_estimation.cpp)

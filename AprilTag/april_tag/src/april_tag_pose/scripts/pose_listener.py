@@ -2,42 +2,42 @@ import rospy
 from std_msgs.msg import String
 import tf2_ros
 from tf2_geometry_msgs import PointStamped
+import gatt
+import sys
+from imu_ import AnyDevice
+
+
+
+
+
 
 if __name__=="__main__":
     rospy.init_node("listener_pose")
     buffer = tf2_ros.Buffer()
     listener = tf2_ros.TransformListener(buffer)
     rate = rospy.Rate(100)
-    point_source1 = PointStamped()
-    point_source1.header.frame_id = "son1"
-    point_source1.point.x = 0.001
-    point_source1.point.y = 0.001
-    point_source1.point.z = 0.001
+    
+    mac_address = "6B:C3:BA:65:E3:86"
+    port = 7890
+    print("Connecting bluetooth...")
+    
+    manager = gatt.DeviceManager(adapter_name='hci0')
+    device = AnyDevice(manager=manager, mac_address=mac_address)
+    device.sock_pc = None
+    device.parse_imu_flage = True
+    device.connect()
+    manager.run()
 
-    point_source2 = PointStamped()
-    point_source2.header.frame_id = "son2"
-    point_source2.point.x = 0.001
-    point_source2.point.y = 0.001
-    point_source2.point.z = 0.001
 
-    point_source3 = PointStamped()
-    point_source3.header.frame_id = "son3"
-    point_source3.point.x = 0.001
-    point_source3.point.y = 0.001
-    point_source3.point.z = 0.001
-
-    point_source4 = PointStamped()
-    point_source4.header.frame_id = "son4"
-    point_source4.point.x = 0.001
-    point_source4.point.y = 0.001
-    point_source4.point.z = 0.001
     while not rospy.is_shutdown():
         try:
-            point_target = buffer.transform(point_source1,"world",rospy.Duration(1))
-            rospy.loginfo("转换结果:x=%.2f,y=%.2f,z=%.2f",
-                          point_target.point.x,
-                          point_target.point.y,
-                          point_target.point.z)
-            
+            tfs = buffer.lookup_transform("world","son2",rospy.Time(0))
+            point_source = PointStamped()
+            rospy.loginfo("son2 in world")
+            rospy.loginfo("相对坐标:x=%.2f, y=%.2f, z=%.2f",
+                        tfs.transform.translation.x,
+                        tfs.transform.translation.y,
+                        tfs.transform.translation.z)
         except Exception as e:
             rospy.logerr("异常%s",e)
+        rate.sleep()

@@ -12,5 +12,7 @@ make
 配置default-chessboard.cfg文件
 ```
 cd ../calibration/src
+rm camera.xml
 ./camera_calibration default-chessboard.cfg
 ```
+运行将camera.xml拷贝到april_tag_pose的src文件夹下

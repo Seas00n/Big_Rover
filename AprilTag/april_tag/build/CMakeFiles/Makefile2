@@ -84,8 +84,6 @@ clean: calibration/clean
 # Recursive "all" directory target.
 april_tag_pose/all: april_tag_pose/CMakeFiles/open_cam.dir/all
 april_tag_pose/all: april_tag_pose/CMakeFiles/pose_estimation.dir/all
-april_tag_pose/all: april_tag_pose/CMakeFiles/test_pose.dir/all
-april_tag_pose/all: april_tag_pose/CMakeFiles/test_camera.dir/all
 
 .PHONY : april_tag_pose/all
 
@@ -126,10 +124,8 @@ april_tag_pose/clean: april_tag_pose/CMakeFiles/rosgraph_msgs_generate_messages_
 april_tag_pose/clean: april_tag_pose/CMakeFiles/tf_generate_messages_eus.dir/clean
 april_tag_pose/clean: april_tag_pose/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 april_tag_pose/clean: april_tag_pose/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/clean
-april_tag_pose/clean: april_tag_pose/CMakeFiles/test_pose.dir/clean
 april_tag_pose/clean: april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/clean
 april_tag_pose/clean: april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
-april_tag_pose/clean: april_tag_pose/CMakeFiles/test_camera.dir/clean
 april_tag_pose/clean: april_tag_pose/CMakeFiles/bond_generate_messages_cpp.dir/clean
 april_tag_pose/clean: april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_py.dir/clean
 april_tag_pose/clean: april_tag_pose/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
@@ -1319,33 +1315,6 @@ april_tag_pose/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/clean:
 .PHONY : april_tag_pose/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/clean
 
 #=============================================================================
-# Target rules for target april_tag_pose/CMakeFiles/test_pose.dir
-
-# All Build rule for target.
-april_tag_pose/CMakeFiles/test_pose.dir/all:
-	$(MAKE) -f april_tag_pose/CMakeFiles/test_pose.dir/build.make april_tag_pose/CMakeFiles/test_pose.dir/depend
-	$(MAKE) -f april_tag_pose/CMakeFiles/test_pose.dir/build.make april_tag_pose/CMakeFiles/test_pose.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles --progress-num=17,18 "Built target test_pose"
-.PHONY : april_tag_pose/CMakeFiles/test_pose.dir/all
-
-# Build rule for subdir invocation for target.
-april_tag_pose/CMakeFiles/test_pose.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/test_pose.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles 0
-.PHONY : april_tag_pose/CMakeFiles/test_pose.dir/rule
-
-# Convenience name for target.
-test_pose: april_tag_pose/CMakeFiles/test_pose.dir/rule
-
-.PHONY : test_pose
-
-# clean rule for target.
-april_tag_pose/CMakeFiles/test_pose.dir/clean:
-	$(MAKE) -f april_tag_pose/CMakeFiles/test_pose.dir/build.make april_tag_pose/CMakeFiles/test_pose.dir/clean
-.PHONY : april_tag_pose/CMakeFiles/test_pose.dir/clean
-
-#=============================================================================
 # Target rules for target april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_lisp.dir
 
 # All Build rule for target.
@@ -1398,33 +1367,6 @@ geometry_msgs_generate_messages_nodejs: april_tag_pose/CMakeFiles/geometry_msgs_
 april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean:
 	$(MAKE) -f april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
 .PHONY : april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target april_tag_pose/CMakeFiles/test_camera.dir
-
-# All Build rule for target.
-april_tag_pose/CMakeFiles/test_camera.dir/all:
-	$(MAKE) -f april_tag_pose/CMakeFiles/test_camera.dir/build.make april_tag_pose/CMakeFiles/test_camera.dir/depend
-	$(MAKE) -f april_tag_pose/CMakeFiles/test_camera.dir/build.make april_tag_pose/CMakeFiles/test_camera.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles --progress-num=15,16 "Built target test_camera"
-.PHONY : april_tag_pose/CMakeFiles/test_camera.dir/all
-
-# Build rule for subdir invocation for target.
-april_tag_pose/CMakeFiles/test_camera.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/test_camera.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build/CMakeFiles 0
-.PHONY : april_tag_pose/CMakeFiles/test_camera.dir/rule
-
-# Convenience name for target.
-test_camera: april_tag_pose/CMakeFiles/test_camera.dir/rule
-
-.PHONY : test_camera
-
-# clean rule for target.
-april_tag_pose/CMakeFiles/test_camera.dir/clean:
-	$(MAKE) -f april_tag_pose/CMakeFiles/test_camera.dir/build.make april_tag_pose/CMakeFiles/test_camera.dir/clean
-.PHONY : april_tag_pose/CMakeFiles/test_camera.dir/clean
 
 #=============================================================================
 # Target rules for target april_tag_pose/CMakeFiles/bond_generate_messages_cpp.dir

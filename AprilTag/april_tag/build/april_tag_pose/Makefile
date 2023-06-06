@@ -633,21 +633,6 @@ actionlib_msgs_generate_messages_eus/fast:
 .PHONY : actionlib_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-april_tag_pose/CMakeFiles/test_pose.dir/rule:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/test_pose.dir/rule
-.PHONY : april_tag_pose/CMakeFiles/test_pose.dir/rule
-
-# Convenience name for target.
-test_pose: april_tag_pose/CMakeFiles/test_pose.dir/rule
-
-.PHONY : test_pose
-
-# fast build rule for target.
-test_pose/fast:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/test_pose.dir/build.make april_tag_pose/CMakeFiles/test_pose.dir/build
-.PHONY : test_pose/fast
-
-# Convenience name for target.
 april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
 	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
 .PHONY : april_tag_pose/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
@@ -676,21 +661,6 @@ geometry_msgs_generate_messages_nodejs: april_tag_pose/CMakeFiles/geometry_msgs_
 geometry_msgs_generate_messages_nodejs/fast:
 	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make april_tag_pose/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-april_tag_pose/CMakeFiles/test_camera.dir/rule:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag_pose/CMakeFiles/test_camera.dir/rule
-.PHONY : april_tag_pose/CMakeFiles/test_camera.dir/rule
-
-# Convenience name for target.
-test_camera: april_tag_pose/CMakeFiles/test_camera.dir/rule
-
-.PHONY : test_camera
-
-# fast build rule for target.
-test_camera/fast:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/test_camera.dir/build.make april_tag_pose/CMakeFiles/test_camera.dir/build
-.PHONY : test_camera/fast
 
 # Convenience name for target.
 april_tag_pose/CMakeFiles/bond_generate_messages_cpp.dir/rule:
@@ -1181,60 +1151,6 @@ src/pose_estimation.cpp.s:
 	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/pose_estimation.dir/build.make april_tag_pose/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.s
 .PHONY : src/pose_estimation.cpp.s
 
-src/test_camera.o: src/test_camera.cpp.o
-
-.PHONY : src/test_camera.o
-
-# target to build an object file
-src/test_camera.cpp.o:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/test_camera.dir/build.make april_tag_pose/CMakeFiles/test_camera.dir/src/test_camera.cpp.o
-.PHONY : src/test_camera.cpp.o
-
-src/test_camera.i: src/test_camera.cpp.i
-
-.PHONY : src/test_camera.i
-
-# target to preprocess a source file
-src/test_camera.cpp.i:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/test_camera.dir/build.make april_tag_pose/CMakeFiles/test_camera.dir/src/test_camera.cpp.i
-.PHONY : src/test_camera.cpp.i
-
-src/test_camera.s: src/test_camera.cpp.s
-
-.PHONY : src/test_camera.s
-
-# target to generate assembly for a file
-src/test_camera.cpp.s:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/test_camera.dir/build.make april_tag_pose/CMakeFiles/test_camera.dir/src/test_camera.cpp.s
-.PHONY : src/test_camera.cpp.s
-
-src/test_pose.o: src/test_pose.cpp.o
-
-.PHONY : src/test_pose.o
-
-# target to build an object file
-src/test_pose.cpp.o:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/test_pose.dir/build.make april_tag_pose/CMakeFiles/test_pose.dir/src/test_pose.cpp.o
-.PHONY : src/test_pose.cpp.o
-
-src/test_pose.i: src/test_pose.cpp.i
-
-.PHONY : src/test_pose.i
-
-# target to preprocess a source file
-src/test_pose.cpp.i:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/test_pose.dir/build.make april_tag_pose/CMakeFiles/test_pose.dir/src/test_pose.cpp.i
-.PHONY : src/test_pose.cpp.i
-
-src/test_pose.s: src/test_pose.cpp.s
-
-.PHONY : src/test_pose.s
-
-# target to generate assembly for a file
-src/test_pose.cpp.s:
-	cd /home/yuxuan/Project/Big_Rover/AprilTag/april_tag/build && $(MAKE) -f april_tag_pose/CMakeFiles/test_pose.dir/build.make april_tag_pose/CMakeFiles/test_pose.dir/src/test_pose.cpp.s
-.PHONY : src/test_pose.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1278,10 +1194,8 @@ help:
 	@echo "... tf_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_eus"
-	@echo "... test_pose"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... test_camera"
 	@echo "... bond_generate_messages_cpp"
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"
@@ -1318,12 +1232,6 @@ help:
 	@echo "... src/pose_estimation.o"
 	@echo "... src/pose_estimation.i"
 	@echo "... src/pose_estimation.s"
-	@echo "... src/test_camera.o"
-	@echo "... src/test_camera.i"
-	@echo "... src/test_camera.s"
-	@echo "... src/test_pose.o"
-	@echo "... src/test_pose.i"
-	@echo "... src/test_pose.s"
 .PHONY : help
 
 
