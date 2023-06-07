@@ -1,6 +1,7 @@
 <launch>
     <node pkg = "april_tag_pose" type = "open_cam" name = "open_cam"/>
     <node pkg = "april_tag_pose" type = "pose_estimation" name="pose_estimation"/>
-    <!-- <node pkg = "april_tag_pose" type = "pose_listener.py" name="pose_listener"/> -->
+    <node pkg = "april_tag_pose" type = "imu_.py" name = "imu_reader"/>
     <node pkg = "rviz" type = "rviz" name = "rviz" args="-d $(find april_tag_pose)/config/my_pose_estimation.config.rviz"/>
+    <!-- <node pkg = "april_tag_pose" type = "pose_listener.py" name = "data_loader"/> -->
 </launch>

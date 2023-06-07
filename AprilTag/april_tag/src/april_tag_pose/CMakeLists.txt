@@ -58,6 +58,9 @@ catkin_install_python(PROGRAMS
   scripts/pose_listener.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
-
+catkin_install_python(PROGRAMS
+  scripts/imu_.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 SET(CMAKE_BUILD_TYPE "RelWithDebInfo")

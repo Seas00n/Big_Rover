@@ -20,6 +20,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/CMakeLists.txt"
   "/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/april_tag_pose/CMakeLists.txt"
   "/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/april_tag_pose/package.xml"
+  "/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/april_tag_pose/scripts/imu_.py"
   "/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/april_tag_pose/scripts/pose_listener.py"
   "/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/calibration/CMakeLists.txt"
   "/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/calibration/package.xml"
