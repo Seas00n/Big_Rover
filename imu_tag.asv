@@ -1,8 +1,0 @@
-clear all;clc;close all;
-V = diag([0.02, 0.5*pi/180].^2);
-veh = Bicycle('covar',V);
-% 速度1m/s,转向0.3rad,步长0.1s仿真
-% odo为里程计输入
-odo = veh.step(1,0.3);
-real_x = veh.x';
-estimateveh.f([0,0,0],odo)
