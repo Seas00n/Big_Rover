@@ -37,7 +37,7 @@ for i=1:size(data,1)
     se3_imu(:,:,i) = SO3ToMatrix(R,T);
 end
 %myse3animate(se3_imu,'r');
-%myse3animatecompare(se3_tag,se3_imu);
+myse3animatecompare(se3_tag,se3_imu);
 
 %利用imu修正tag朝向
 A_imu_new = A_imu;
@@ -55,9 +55,12 @@ for i = 1:size(data,1)
 end
 % plot(t,quan_imu_list);
 % legend('w','x','y','z')
+% ylabel('Quaternion of IMU')
+% xlabel('time/s')
 % figure(2)
 % plot(t,quan_tag_list);
 % legend('w','x','y','z')
+% ylabel('Quaternion of AprilTag')
 % 利用tag修正积分
 p_ekf = cal_p_ekf(a_imu,A_imu,p_tag,t);
 se3_ekf = zeros(4,4,size(data,1));
@@ -66,6 +69,7 @@ for i=1:size(data,1)
     T = p_ekf(i,:)+p_tag(1,:);
     se3_ekf(:,:,i) = SO3ToMatrix(R,T);
 end
+figure(2)
 myse3animatecompare(se3_tag,se3_ekf);
 
 
@@ -134,9 +138,9 @@ function myse3animatecompare(se3_list1,se3_list2)
         py2 = [se3_2(2,4)-0.01,se3_2(2,4)+0.05];
         pz2 = [se3_2(3,4)-0.05,se3_2(3,4)+0.05];
         hold on
-        xlim([-5,5])
-        ylim([-2,10])
-        zlim([-5,5])
+        xlim([-2,2])
+        ylim([0,6])
+        zlim([-3,2])
         plot3(px,py,pz,'LineWidth',2,'Color','b');
         plot3(px2,py2,pz2,'LineWidth',2,'Color','r');
         pause(0.01)
