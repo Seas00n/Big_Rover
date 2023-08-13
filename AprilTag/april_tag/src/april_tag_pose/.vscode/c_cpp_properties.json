@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/opt/ros/noetic/include/**",
+        "/opt/ros/noetic/lib/**",
+        "/home/yuxuan/Project/Big_RoverCarControl/devel/include/**",
+        "/home/yuxuan/visp-ros/devel/include/**",
+        "/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/april_tag_pose/include/**",
+        "/home/yuxuan/Project/Big_Rover/AprilTag/april_tag/src/calibration/include/**",
+        "/home/yuxuan/visp-ros/src/visp_ros/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
